@@ -111,7 +111,7 @@
               </p>
             </td>
             <td width="33%">
-              <img src="images/austinebel.png">
+              <img src="images/output_white.png">
             </td>
           </tr>
         </table>
@@ -302,47 +302,53 @@
             </td>
           </tr>
 
-          <tr onmouseout="inerf_stop()" onmouseover="inerf_start()">
+
+
+          <tr onmouseout="nerfie_stop()" onmouseover="nerfie_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
-                <div class="two" id='inerf_image'><video width=100% height=100% muted autoplay loop>
-                    <source src="images/inerf_after.mp4" type="video/mp4">
+                <div class="two" id='nerfie_image'><video width=100% height=100% muted autoplay loop>
+                    <source src="images/nerfie_after.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video></div>
-                <img src='images/inerf_before.jpg' width="160">
+                <img src='images/nerfie_before.jpg' width="160">
               </div>
               <script type="text/javascript">
-                function inerf_start() {
-                  document.getElementById('inerf_image').style.opacity = "1";
+                function nerfie_start() {
+                  document.getElementById('nerfie_image').style.opacity = "1";
                 }
-                function inerf_stop() {
-                  document.getElementById('inerf_image').style.opacity = "0";
+                function nerfie_stop() {
+                  document.getElementById('nerfie_image').style.opacity = "0";
                 }
-                inerf_stop()
+                nerfie_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="http://yenchenlin.me/inerf/">
-                <papertitle>iNeRF: Inverting Neural Radiance Fields for Pose Estimation</papertitle>
+              <a href="https://nerfies.github.io/">
+                <papertitle>Deformable Neural Radiance Fields</papertitle>
               </a>
               <br>
-              <a href="https://yenchenlin.me/">Lin Yen-Chen</a>,
-              <a href="http://www.peteflorence.com/">Pete Florence</a>,
+
+              <a href="https://keunhong.com">Keunhong Park</a>,
+              <a href="https://utkarshsinha.com">Utkarsh Sinha</a>,
               <strong>Jonathan T. Barron</strong>,
-              <a href="https://meche.mit.edu/people/faculty/ALBERTOR@MIT.EDU">Alberto Rodriguez</a>, <br>
-              <a href="http://web.mit.edu/phillipi/">Phillip Isola</a>,
-              <a href="https://scholar.google.com/citations?user=_BPdgV0AAAAJ&hl=en">Tsung-Yi Lin</a>
+              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a>,
+              <a href="https://www.danbgoldman.com">Dan B Goldman</a>,
+              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a>,
+              <a href="http://www.ricardomartinbrualla.com">Ricardo-Martin Brualla</a>
               <br>
               <em>arXiv</em>, 2020
               <br>
-              <a href="http://yenchenlin.me/inerf/">project page</a> /
-              <a href="https://arxiv.org/abs/2012.05877">arXiv</a> /
-              <a href="https://www.youtube.com/watch?v=eQuCZaQN0tI">video</a>
+              <a href="https://nerfies.github.io/">project page</a> /
+              <a href="https://arxiv.org/abs/2011.12948">arXiv</a> /
+              <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA">video</a>
               <p></p>
-              <p>Given an image of an object and a NeRF of that object, you can estimate that object's pose.
+              <p>Building deformation fields into NeRF lets you capture non-rigid subjects, like people.
               </p>
             </td>
           </tr>
+
+
 
 
           <tr>
