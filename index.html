@@ -82,31 +82,6 @@
 <body>
 
   <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
-
-    <tr onmouseout="inerf_stop()" onmouseover="inerf_start()">
-      <td width="45%">
-        <div class="one">
-          <div class="two" id='inerf_image'><video width=100% height=100% muted autoplay loop>
-              <source src="images/out.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video></div>
-          <img src='images/image-1.jpg' width="160">
-        </div>
-        <script type="text/javascript">
-          function inerf_start() {
-            document.getElementById('inerf_image').style.opacity = "1";
-          }
-          function inerf_stop() {
-            document.getElementById('inerf_image').style.opacity = "0";
-          }
-          inerf_stop()
-        </script>
-      </td>
-    </tr>
-  
-  </table>
-
-  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
     <tr>
       <td>
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
@@ -136,14 +111,15 @@
                 <a href="https://github.com/abe2122"> GitHub </a>
               </p>
             </td>
+            
             <td width="33%" onmouseout="inerf3_stop()" onmouseover="inerf3_start()">
 
               <div class="one">
                 <div class="two" id='inerf_image3'><video width=100% height=100% muted autoplay loop>
-                    <source src="images/out.mp4" type="video/mp4">
+                    <source src="images/out4.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video></div>
-                <img src='images/image-1.jpg' width="120">
+                <img src='images/image-1.jpg'>
               </div>
               <script type="text/javascript">
                 function inerf_start3() {
@@ -315,10 +291,10 @@
             </div>
             <script type="text/javascript">
               function inerf_start() {
-                document.getElementById('inerf_image').style.opacity = "1";
+                //document.getElementById('inerf_image').style.opacity = "1";
               }
               function inerf_stop() {
-                document.getElementById('inerf_image').style.opacity = "0";
+                //document.getElementById('inerf_image').style.opacity = "0";
               }
               inerf_stop()
             </script>
@@ -346,50 +322,50 @@
           </tr>
 
 
+        <tr onmouseout="nerfie_stop()" onmouseover="nerfie_start()">
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one">
+              <div class="two" id='nerfie_image'><video width=100% height=100% muted autoplay loop>
+                  <source src="images/out4.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video></div>
+              <img src='images/image-1.jpg' width="160">
+            </div>
+            <script type="text/javascript">
+              function nerfie_start() {
+                document.getElementById('nerfie_image').style.opacity = "1";
+              }
+              function nerfie_stop() {
+                document.getElementById('nerfie_image').style.opacity = "0";
+              }
+              nerfie_stop()
+            </script>
+          </td>
+          <td style="padding:20px;width:75%;vertical-align:middle">
+            <a href="https://nerfies.github.io/">
+              <papertitle>Deformable Neural Radiance Fields</papertitle>
+            </a>
+            <br>
+        
+            <a href="https://keunhong.com">Keunhong Park</a>,
+            <a href="https://utkarshsinha.com">Utkarsh Sinha</a>,
+            <strong>Jonathan T. Barron</strong>,
+            <a href="http://sofienbouaziz.com">Sofien Bouaziz</a>,
+            <a href="https://www.danbgoldman.com">Dan B Goldman</a>,
+            <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a>,
+            <a href="http://www.ricardomartinbrualla.com">Ricardo-Martin Brualla</a>
+            <br>
+            <em>arXiv</em>, 2020
+            <br>
+            <a href="https://nerfies.github.io/">project page</a> /
+            <a href="https://arxiv.org/abs/2011.12948">arXiv</a> /
+            <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA">video</a>
+            <p></p>
+            <p>Building deformation fields into NeRF lets you capture non-rigid subjects, like people.
+            </p>
+          </td>
+        </tr>
 
-          <tr onmouseout="nerfie_stop()" onmouseover="nerfie_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='nerfie_image'><video width=100% height=100% muted autoplay loop>
-                    <source src="images/out4.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video></div>
-                <img src='images/image-1.jpg' width="160">
-              </div>
-              <script type="text/javascript">
-                function nerfie_start() {
-                  document.getElementById('nerfie_image').style.opacity = "1";
-                }
-                function nerfie_stop() {
-                  document.getElementById('nerfie_image').style.opacity = "0";
-                }
-                nerfie_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://nerfies.github.io/">
-                <papertitle>Deformable Neural Radiance Fields</papertitle>
-              </a>
-              <br>
-
-              <a href="https://keunhong.com">Keunhong Park</a>,
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a>,
-              <strong>Jonathan T. Barron</strong>,
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a>,
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a>,
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a>,
-              <a href="http://www.ricardomartinbrualla.com">Ricardo-Martin Brualla</a>
-              <br>
-              <em>arXiv</em>, 2020
-              <br>
-              <a href="https://nerfies.github.io/">project page</a> /
-              <a href="https://arxiv.org/abs/2011.12948">arXiv</a> /
-              <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA">video</a>
-              <p></p>
-              <p>Building deformation fields into NeRF lets you capture non-rigid subjects, like people.
-              </p>
-            </td>
-          </tr>
 
 
 
