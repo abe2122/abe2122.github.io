@@ -1,90 +1,22 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 
-<head>
-  <meta name=viewport content=“width=800”>
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-  <style type="text/css">
-    /* Color scheme stolen from Sergey Karayev */
-    a {
-      color: #1772d0;
-      text-decoration: none;
-    }
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    a:focus,
-    a:hover {
-      color: #f09228;
-      text-decoration: none;
-    }
-
-    body,
-    td,
-    th,
-    tr,
-    p,
-    a {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px
-    }
-
-    strong {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px;
-    }
-
-    heading {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 22px;
-    }
-
-    papertitle {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px;
-      font-weight: 700
-    }
-
-    name {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 32px;
-    }
-
-    .one {
-      width: 160px;
-      height: 160px;
-      position: relative;
-    }
-
-    .two {
-      width: 160px;
-      height: 160px;
-      position: absolute;
-      transition: opacity .2s ease-in-out;
-      -moz-transition: opacity .2s ease-in-out;
-      -webkit-transition: opacity .2s ease-in-out;
-    }
-
-    .fade {
-      transition: opacity .2s ease-in-out;
-      -moz-transition: opacity .2s ease-in-out;
-      -webkit-transition: opacity .2s ease-in-out;
-    }
-
-    span.highlight {
-      background-color: #ffffd0;
-    }
-  </style>
-  <link rel="icon" type="image/png" href="images/chip.png">
   <title>Austin Ebel</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+  <meta name="author" content="Austin Ebel">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" type="image/png" href="images/chip.png">
 </head>
 
 <body>
-
   <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
     <tr>
       <td>
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <table width="100%" align="center" border="3" cellspacing="0" cellpadding="20">
           <tr>
             <td width="67%" valign="middle">
               <p align="center">
@@ -112,55 +44,29 @@
               </p>
             </td>
 
-            <!-- <td width="33%" valign "middle" align="center" cellpadding="0" onmouseout="inerf_stop3()" onmouseover="inerf_start3()">
+            <td width=33% align=left valign=top cellpadding="0" onmouseout="pfp_stop()" onmouseover="pfp_start()">
               <div class="one">
-                <div class="two" id='inerf_image3'><video width=100% height=100% muted autoplay loop>
-                    <source src="images/out4.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video></div>
-                <img src='images/image-1.jpg' width=220>
-              </div>
-              <script type="text/javascript">
-                function inerf_start3() {
-                  document.getElementById('inerf_image3').style.opacity = "1";
-                }
-                function inerf_stop3() {
-                  document.getElementById('inerf_image3').style.opacity = "0";
-                }
-                inerf3_stop()
-              </script>
-            </td> -->
-
-
-            <td width=33% onmouseout="inerf_stop3()" onmouseover="inerf_start3()">
-              <div class="one">
-                <div class="two" id='inerf_image3'>
+                <div class="two" id='profile_pic'>
                   <video muted autoplay loop>
-                      <source src="images/out4.mp4" type="video/mp4">
+                    <source src="images/out4.mp4" type="video/mp4">
                   </video>
                 </div>
                 <img src='images/image-1.jpg'>
               </div>
               <script type="text/javascript">
-                function inerf_start3() {
-                  document.getElementById('inerf_image3').style.opacity = "1";
+                function pfp_start() {
+                  document.getElementById('profile_pic').style.opacity = "1";
                 }
-                function inerf_stop3() {
-                  document.getElementById('inerf_image3').style.opacity = "0";
+                function pfp_stop() {
+                  document.getElementById('profile_pic').style.opacity = "0";
                 }
-                inerf3_stop()
+                pfp_stop()
               </script>
             </td>
-
-            <!-- <td width=33%>
-              <img src="images/image-1.jpg">
-            </td> -->
-
           </tr>
         </table>
 
-
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <table width="100%" align="center" border="3" cellspacing="0" cellpadding="20">
           <tr>
             <td width="100%" valign="middle">
               <heading>Education</heading>
@@ -179,23 +85,27 @@
         </table>
 
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <table width="100%" align="center" border="3" cellspacing="0" cellpadding="20">
           <tr>
             <td width="100%" valign="middle">
               <heading>Research & Projects</heading>
+              <p>
+                My work focuses on how children's rich theories of the world and sophisticated mental simulations are used to support action.
+                Key areas of interest include planning, tool use, and spatial reasoning.
+                </p>
             </td>
           </tr>
         </table>
 
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <table width="100%" border="3" cellspacing="0" cellpadding="20">
 
-          <tr onmouseout="decoding_stop()" onmouseover="decoding_start()">
-            <td width="45%">
-
-              <img src="images/8bit-microprocessor.png" width="350px" height="215px" />
+          <tr>
+            <td width="40%">
+              <img src="images/8bit-microprocessor.png"/ width=100%>
             </td>
-            <td valign="top" width="55%">
+            
+            <td valign="middle"width="60%">
               <p>
                 <a href="data/VLSI_Report2.pdf">
                   <papertitle>Custom 8-Bit Microprocessor Design</papertitle>
@@ -204,225 +114,127 @@
                 <strong>Austin Ebel</strong>, Javier Corona
               <p></p>
               <p>
-                Particle Swarm Optimization (PSO) is a technique most often associated with cost function minimization,
-                however it has
-                seen limited use in practical applications as its performance suffers severely on CPUs in higher
-                dimensional search
-                spaces. This is because resources and runtimes scale quadratically with increasing complexity. Optimal
-                use of
-                shared memory, block size, and data transfer techniques can result in significant performance
-                improvements, but are
-                often difficult to realize as they are extremely application specific.
-            </td>
-          </tr>
-
-
-          <tr>
-            <td width="45%">
-
-              <img src="images/comparison.png" width="350px" height="250px" />
-            </td>
-            <td valign="top" width="55%">
-              <p>
-                <a href="data/Parallel_PSO.pdf">
-                  <papertitle>Parallelization of Partical Swarm Optimization
-                  </papertitle>
-                </a>
-                <br>
-                <strong>Austin Ebel</strong>
-              <p></p>
-              <p>
-                Particle Swarm Optimization (PSO) is a technique most often associated with cost function minimization,
-                however it has
-                seen limited use in practical applications as its performance suffers severely on CPUs in higher
-                dimensional search
-                spaces. This is because resources and runtimes scale quadratically with increasing complexity. Optimal
-                use of
-                shared memory, block size, and data transfer techniques can result in significant performance
-                improvements, but are
-                often difficult to realize as they are extremely application specific.
+                Testing
             </td>
           </tr>
 
           <tr>
-            <td width="45%">
-
-              <img src="images/print_pred_class.png" width="350px" height="250px" />
+            <td width="40%">
+              <img src="images/8bit-microprocessor.png"/ width=100%>
             </td>
-            <td valign="top" width="55%">
+            
+            <td valign="middle" width="60%">
               <p>
-                <a href="data/machines_as_craftsmen.pdf">
-                  <papertitle>Machines as Craftsmen: Localized Parameter Setting Optimization for Fused Filament
-                    Fabrication 3D Printing
-                  </papertitle>
+                <a href="data/VLSI_Report2.pdf">
+                  <papertitle>Parallelization of Partical Swarm Optimization</papertitle>
                 </a>
                 <br>
-                John Gardner, Kevin Hunt,
-                <strong>Austin Ebel</strong>,
-                Evan Rose, Sean Zylich, Benjamin Jensen, Kristopher Wise, Emilie Siochi, Godfrey Sauti
-                <br>
-                <em>Advanced Materials Technologies</em>, 2019 <br>
+                <strong>Austin Ebel</strong>, Javier Corona
               <p></p>
               <p>
-                Particle Swarm Optimization (PSO) is a technique most often associated with cost function minimization,
-                however it has
-                seen limited use in practical applications as its performance suffers severely on CPUs in higher
-                dimensional search
-                spaces. This is because resources and runtimes scale quadratically with increasing complexity. Optimal
-                use of
-                shared memory, block size, and data transfer techniques can result in significant performance
-                improvements, but are
-                often difficult to realize as they are extremely application specific.
+                Testing
             </td>
           </tr>
-
 
           <tr>
-            <td width="45%">
-
-              <img src="images/generalizations_mw_results.png" width="350px" height="250px" />
+            <td width="40%">
+              <img src="images/8bit-microprocessor.png"/ width=100%>
             </td>
-            <td valign="top" width="55%">
+            
+            <td valign="middle" width="60%">
               <p>
-                <a href="data/mitra_wang_generalizations.pdf">
-                  <papertitle>Generalizations of the Mitra-Wang Model of ISP Behavior in the Presence of Managed Service
-                  </papertitle>
+                <a href="data/VLSI_Report2.pdf">
+                  <papertitle>Machines as Craftsmen: Localized Parameter Setting Optimization for Fused Filament Fabrication 3D Printing</papertitle>
                 </a>
                 <br>
-                <strong>Austin Ebel</strong>
+                <strong>Austin Ebel</strong>, Javier Corona
               <p></p>
               <p>
-                Particle Swarm Optimization (PSO) is a technique most often associated with cost function minimization,
-                however it has
-                seen limited use in practical applications as its performance suffers severely on CPUs in higher
-                dimensional search
-                spaces. This is because resources and runtimes scale quadratically with increasing complexity. Optimal
-                use of
-                shared memory, block size, and data transfer techniques can result in significant performance
-                improvements, but are
-                often difficult to realize as they are extremely application specific.
+                Testing
             </td>
           </tr>
 
-          <tr onmouseout="inerf_stop()" onmouseover="inerf_start()">
-            <td width="45%">
-            <div class="one">
-              <div class="two" id='inerf_image'><video width=100% height=100% muted autoplay loop>
-                  <source src="images/out4.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video></div>
-              <img src='images/image-1.jpg' width="120">
-            </div>
-            <script type="text/javascript">
-              function inerf_start() {
-                //document.getElementById('inerf_image').style.opacity = "1";
-              }
-              function inerf_stop() {
-                //document.getElementById('inerf_image').style.opacity = "0";
-              }
-              inerf_stop()
-            </script>
-
+          <tr>
+            <td width="40%">
+              <img src="images/8bit-microprocessor.png"/ width=100%>
             </td>
-            <td valign="top" width="55%">
+            
+            <td valign="middle" width="60%">
               <p>
-                <a href="data/VLSI_Report.pdf">
+                <a href="data/VLSI_Report2.pdf">
+                  <papertitle>Generalizations of the Mitra-Wang Model of ISP Behavior in the Presence of Managed Service</papertitle>
+                </a>
+                <br>
+                <strong>Austin Ebel</strong>, Javier Corona
+              <p></p>
+              <p>
+                Testing
+            </td>
+          </tr>
+
+          <tr>
+            <td width="40%">
+              <img src="images/8bit-microprocessor.png"/ width=100%>
+            </td>
+            
+            <td valign="middle" width="60%">
+              <p>
+                <a href="data/VLSI_Report2.pdf">
                   <papertitle>AWARES</papertitle>
                 </a>
                 <br>
-                <strong>Austin Ebel</strong>
+                <strong>Austin Ebel</strong>, Javier Corona
               <p></p>
               <p>
-                Particle Swarm Optimization (PSO) is a technique most often associated with cost function minimization,
-                however it has
-                seen limited use in practical applications as its performance suffers severely on CPUs in higher
-                dimensional search
-                spaces. This is because resources and runtimes scale quadratically with increasing complexity. Optimal
-                use of
-                shared memory, block size, and data transfer techniques can result in significant performance
-                improvements, but are
-                often difficult to realize as they are extremely application specific.
+                Testing
             </td>
           </tr>
-
-
-        <tr onmouseout="nerfie_stop()" onmouseover="nerfie_start()">
-          <td style="padding:20px;width:25%;vertical-align:middle">
-            <div class="one">
-              <div class="two" id='nerfie_image'><video width=100% height=100% muted autoplay loop>
-                  <source src="images/out4.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video></div>
-              <img src='images/image-1.jpg' width="160">
-            </div>
-            <script type="text/javascript">
-              function nerfie_start() {
-                document.getElementById('nerfie_image').style.opacity = "1";
-              }
-              function nerfie_stop() {
-                document.getElementById('nerfie_image').style.opacity = "0";
-              }
-              nerfie_stop()
-            </script>
-          </td>
-          <td style="padding:20px;width:75%;vertical-align:middle">
-            <a href="https://nerfies.github.io/">
-              <papertitle>Deformable Neural Radiance Fields</papertitle>
-            </a>
-            <br>
-
-            <a href="https://keunhong.com">Keunhong Park</a>,
-            <a href="https://utkarshsinha.com">Utkarsh Sinha</a>,
-            <strong>Jonathan T. Barron</strong>,
-            <a href="http://sofienbouaziz.com">Sofien Bouaziz</a>,
-            <a href="https://www.danbgoldman.com">Dan B Goldman</a>,
-            <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a>,
-            <a href="http://www.ricardomartinbrualla.com">Ricardo-Martin Brualla</a>
-            <br>
-            <em>arXiv</em>, 2020
-            <br>
-            <a href="https://nerfies.github.io/">project page</a> /
-            <a href="https://arxiv.org/abs/2011.12948">arXiv</a> /
-            <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA">video</a>
-            <p></p>
-            <p>Building deformation fields into NeRF lets you capture non-rigid subjects, like people.
-            </p>
-          </td>
-        </tr>
-
-
-
-
 
           <tr>
-            <td width="45%">
-
-              <img src="images/8bit-microprocessor.png" width="350px" height="215px" />
+            <td width="40%">
+              <img src="images/8bit-microprocessor.png"/ width=100%>
             </td>
-            <td valign="top" width="55%">
+            
+            <td valign="middle" width="60%">
               <p>
-                <a href="data/VLSI_Report.pdf">
-                  <papertitle>Generalizations of </papertitle>
+                <a href="data/VLSI_Report2.pdf">
+                  <papertitle>Generalizations of Rohlf's Model of Demand</papertitle>
                 </a>
                 <br>
-                <strong>Austin Ebel</strong>
+                <strong>Austin Ebel</strong>, Javier Corona
               <p></p>
               <p>
-                Particle Swarm Optimization (PSO) is a technique most often associated with cost function minimization,
-                however it has
-                seen limited use in practical applications as its performance suffers severely on CPUs in higher
-                dimensional search
-                spaces. This is because resources and runtimes scale quadratically with increasing complexity. Optimal
-                use of
-                shared memory, block size, and data transfer techniques can result in significant performance
-                improvements, but are
-                often difficult to realize as they are extremely application specific.
+                Testing
             </td>
           </tr>
 
+          <tr onmouseout="nerd_stop()" onmouseover="nerd_start()">
+            <td width=40%>
+              <div class="one">
+                <div class="two" id='nerd_image'><video  width=100% height=100% muted autoplay loop>
+                <source src="images/out4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='images/image-1.jpg' width="160">
+              </div>
+              <script type="text/javascript">
+                function nerd_start() {
+                  document.getElementById('nerd_image').style.opacity = "1";
+                }
 
+                function nerd_stop() {
+                  document.getElementById('nerd_image').style.opacity = "0";
+                }
+                nerd_stop()
+              </script>
+            </td>
+            <td width=60%>
+              Test
+            </td>
+          </tr>
 
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+         
+          <table width="100%" align="center" border="3" cellspacing="0" cellpadding="20">
             <tr>
               <td width="100%" valign="middle">
                 <heading>Experience</heading>
@@ -454,7 +266,7 @@
             </tr>
           </table>
 
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <table width="100%" align="center" border="3" cellspacing="0" cellpadding="20">
             <tr>
               <td>
                 <br>
