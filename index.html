@@ -108,11 +108,11 @@
         </table>
 
 
-        <table width="100%" border="0" cellspacing="0" cellpadding="15">
+        <table width="100%" border="3" cellspacing="0" cellpadding="15">
 
           <tr>
-            <td width="40%" align="right">
-              <img src="images/vlsi-resized.png"/ width=100%>
+            <td width="40%" align="center">
+              <img src="images/vlsi-resized.png" width="100%">
             </td>
             
             <td valign="middle"width="60%">
@@ -124,8 +124,8 @@
                 <strong>Austin Ebel</strong>, Javier Corona
               <p></p>
               <p>
-                We design and layout a custom 8-bit microprocessor in Cadence Virtuoso using IBM's 90nm technology for a Digital VLSI Circuits class. 
-                It supports addition, subtraction, shifting, and storage/retrieval from SRAM and off-chip. Extensive work 
+                We design and layout a custom 8-bit microprocessor in Cadence Virtuoso using IBM's 90nm technology. 
+                It supports addition, subtraction, shifting, and storage/retrieval from SRAM and DRAM. Extensive work 
                 went into sizing devices for optimal performance, ensuring the design was DRC and LVS clean, and simulating 
                 to verify metrics such as cycle time and power dissipation.
             </td>
@@ -133,7 +133,7 @@
 
           <tr>
             <td width="40%">
-              <img src="images/pso-resized.png"/ width=100%>
+              <img src="images/pso-resized.png" width=100%>
             </td>
             
             <td valign="middle" width="60%">
@@ -154,7 +154,7 @@
 
           <tr>
             <td width="40%">
-              <img src="images/confusion_matrix-resized.png"/ width=100%>
+              <img src="images/confusion_matrix-resized.png" width=100%>
             </td>
             
             <td valign="middle" width="60%">
@@ -188,7 +188,7 @@
 
           <tr>
             <td width="40%">
-              <img src="images/mw-resized.png"/ width=100% height="250px">
+              <img src="images/mw-resized.jpg" width=100% height="250px">
             </td>
             
             <td valign="middle" width="60%">
@@ -205,27 +205,69 @@
             </td>
           </tr>
 
-          <tr>
+          <tr onmouseout="awares_stop()" onmouseover="awares_start()">
             <td width="40%">
-              <img src="images/vlsi-resized.png"/ width=100%>
+
+              <div class="three" width="100%" align="center">
+                <div class="four" id='awares_image'>
+                  <video width=90% muted autoplay loop>
+                    <source src="images/awares_curved.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <img src='images/awares_curved.jpg' width="90%">
+              </div>
+              
+              <script type="text/javascript">
+                function awares_start() {
+                  document.getElementById('awares_image').style.opacity = "1";
+                }
+                function awares_stop() {
+                  document.getElementById('awares_image').style.opacity = "0";
+                }
+                awares_stop()
+              </script>
             </td>
-            
-            <td valign="middle" width="60%">
-              <p>
-                <a href="data/VLSI_Report2.pdf">
-                  <papertitle>AWARES</papertitle>
-                </a>
-                <br>
-                <strong>Austin Ebel</strong>
-              <p></p>
-              <p>
-                TO DO
+
+            <td width="60%">
+              <a href="data/AWARES.pdf">
+                <papertitle>Advanced Wearabble Augmented Reality EVA System (AWARES)</papertitle>
+              </a>
+              <br>
+              <p>TO DO
+              </p>
             </td>
           </tr>
 
+<!-- 
+          <tr onmouseout="inerf_stop()" onmouseover="inerf_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='inerf_image'><video width=100% height=100% muted autoplay loop>
+                    <source src="images/awares.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video></div>
+                <img src='images/awares.jpg' width="288">
+              </div>
+              <script type="text/javascript">
+                function inerf_start() {
+                  document.getElementById('inerf_image').style.opacity = "1";
+                }
+                function inerf_stop() {
+                  document.getElementById('inerf_image').style.opacity = "0";
+                }
+                inerf_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              Nice
+            </td>
+          </tr> -->
+
+
+
           <tr>
             <td width="40%">
-              <img src="images/vlsi-resized.png"/ width=100%>
+              <img src="images/vlsi-resized.png" width=100%>
             </td>
             
             <td valign="middle" width="60%">
@@ -241,38 +283,6 @@
             </td>
           </tr>
          
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-            <tr>
-              <td width="100%" valign="middle">
-                <heading>Experience</heading>
-                <p>
-                  <b>Columbia University</b>, New York, New York
-                  <br>
-                  Research Assistant, Sept 2020 - Present
-                </p>
-
-                <p>
-                  <b>NASA Jet Propulsion Laboratory</b>, Pasadena, California
-                  <br>
-                  Software Engineering Intern, Jun. 2020 - Aug. 2020
-                </p>
-
-                <p>
-                  <b>NASA Jet Propulsion Laboratory</b>, Pasadena, California
-                  <br>
-                  Software Engineering Intern, Jun. 2019 - Aug. 2019
-                </p>
-
-                <p>
-                  <b>NASA Langley Research Center</b>, Langley, Virginia
-                  <br>
-                  Software Engineering Intern, Jun. 2018 - Aug. 2018
-                </p>
-
-              </td>
-            </tr>
-          </table>
-
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
             <tr>
               <td>
