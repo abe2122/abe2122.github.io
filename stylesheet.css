@@ -125,8 +125,8 @@ name {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 180px;
+  width: 246px;
+  height: 190px;
   position: relative;
 }
 
@@ -134,8 +134,8 @@ name {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 180px;
+  width: 246px;
+  height: 190px;
   position: absolute;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
