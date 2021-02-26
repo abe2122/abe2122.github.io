@@ -1,0 +1,489 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Create Lambda &mdash; feature-translation-service  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="API Gateway" href="api_gateway.html" />
+    <link rel="prev" title="Creating an AWS Database" href="create_db.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> feature-translation-service
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/downloading.html">Downloading the Data</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HUC Database Creation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/HUC/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/HUC/overview.html#creation-procedure">Creation Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/HUC/overview.html#run-the-code">Run the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/HUC/code_explained.html">Code Explained</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SWOT Database Creation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/SWOT/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/SWOT/overview.html#creation-procedure">Creation Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/SWOT/overview.html#run-the-code">Run the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/SWOT/code_explained.html">Code Explained</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Migrating HUC to AWS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Tutorial Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create_db.html">Creating an AWS Database</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Create Lambda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#download-packages">Download Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-config">Create Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Create Lambda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upload-lambda-to-aws">Upload Lambda to AWS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test-lambda">Test Lambda</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_gateway.html">API Gateway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lambda_explained.html">Lambda Explained</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Migrating SWOT to AWS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../swot_tutorial/overview.html">Tutorial Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../swot_tutorial/overview.html#similarities-differences-to-huc">Similarities/Differences to HUC</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/huc/querying.html">Querying the HUC Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/swot/querying.html">Querying the SWOT Dataset</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">feature-translation-service</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Create Lambda</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/chapters/migrating_to_aws/tutorial/lambda.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="create-lambda">
+<h1>Create Lambda<a class="headerlink" href="#create-lambda" title="Permalink to this headline">¶</a></h1>
+<p>In this section, I’ll be talking about how to create the Lambda function for the Feature Translation Service (and just Lambda functions in general). I pretty closely followed <a class="reference external" href="https://www.isc.upenn.edu/accessing-mysql-databases-aws-python-lambda-function">this tutorial</a>, as it expanded on AWS’s documentation.</p>
+<p><strong>Note:</strong> You can find my full Lambda implementation <a class="reference external" href="https://us-west-2.console.aws.amazon.com/lambda/home?region=us-west-2#/functions/fts-lambda?tab=graph">here</a>!</p>
+<p><strong>Important:</strong> Again, there is an associated video tutorial for this documentation. In it I also go over how to create the Lambda function for the feature translation service. The video can be found <a class="reference external" href="https://drive.google.com/open?id=1rNfWO3NuX53jynmMZaTi5JPj0FRvnNGp">here</a>.</p>
+<hr class="docutils" />
+<div class="section" id="download-packages">
+<h2>Download Packages<a class="headerlink" href="#download-packages" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<p>The first thing to do is download necessary packages. If you’re creating a Lambda function in Python, <em>any</em> packages you import (outside of Python’s standard library I believe) have to be manually zipped up and added to a folder containing the Lambda function. Since I was using a mySQL database, I needed to import the <em>pymsql</em> package.</p>
+<p>Following the tutorial linked above:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">Desktop</span><span class="o">/</span>
+<span class="n">mkdir</span> <span class="n">fts</span><span class="o">-</span><span class="k">lambda</span>
+<span class="n">cd</span>
+
+<span class="n">mkdir</span> <span class="o">~/</span><span class="n">tmp</span>
+<span class="n">cd</span> <span class="o">~/</span><span class="n">tmp</span>
+<span class="n">virtualenv</span> <span class="n">lambda_package</span>
+
+<span class="n">cd</span> <span class="n">lambda_package</span><span class="o">/</span>
+<span class="n">source</span> <span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+
+<span class="p">(</span><span class="n">lambda_package</span><span class="p">)</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pymysql</span>
+<span class="p">(</span><span class="n">lambda_package</span><span class="p">)</span> <span class="n">deactivate</span>
+
+<span class="n">mv</span> <span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pymysql</span> <span class="o">~/</span><span class="n">Desktop</span><span class="o">/</span><span class="n">fts</span><span class="o">-</span><span class="k">lambda</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>I was using Python 3.6 for this, however newer versions can be used. Just change the 3.6 to whatever version you have running. In the same directory run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>to find out. I had a <em>fts-lambda</em> folder that I was storing everything in. The point of this was essentially just to isolate the <em>pymysql</em> package and copy it over to your working directory.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="create-config">
+<h2>Create Config<a class="headerlink" href="#create-config" title="Permalink to this headline">¶</a></h2>
+<p>In the last step, we created the database with a username, password, name, and an associated endpoint. Create a new file called <em>rds_config.py</em> to store this information. Here is some code for how the config file should look:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">db_username</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">db_password</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">db_name</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">db_endpoint</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+<p>In place of the <em>“”</em>, you’ll need to put your username, password, database name, and database endpoint respectively. The database endpoint will be the <em>Host</em> field that was given to you after setting up the database in the previous steps. Add this to the same folder you put your <em>pymyql</em> package in.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id1">
+<h2>Create Lambda<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Now it’s time to create the Lambda function. My final Lambda function can be found below. I use this in the associated video tutorial, however the Lambda function found in <a class="reference external" href="https://www.isc.upenn.edu/accessing-mysql-databases-aws-python-lambda-function">this</a> tutorial is more general purpose (although won’t directly work with this tutorial).</p>
+<details><summary><span style="color:blue">Click here for my Lambda code!</span></summary>
+<p><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">rds_config</span>
+<span class="kn">import</span> <span class="nn">pymysql</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">rds_host</span>  <span class="o">=</span> <span class="n">rds_config</span><span class="o">.</span><span class="n">db_endpoint</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">rds_config</span><span class="o">.</span><span class="n">db_username</span>
+<span class="n">password</span> <span class="o">=</span> <span class="n">rds_config</span><span class="o">.</span><span class="n">db_password</span>
+<span class="n">db_name</span> <span class="o">=</span> <span class="n">rds_config</span><span class="o">.</span><span class="n">db_name</span>
+<span class="n">port</span> <span class="o">=</span> <span class="mi">3306</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">()</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">pymysql</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">rds_host</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+                           <span class="n">passwd</span><span class="o">=</span><span class="n">password</span><span class="p">,</span> <span class="n">db</span><span class="o">=</span><span class="n">db_name</span><span class="p">,</span> <span class="n">connect_timeout</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;ERROR: Unexpected error: Could not connect to MySql instance.&quot;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+
+<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;SUCCESS: Connection to RDS mysql instance succeeded&quot;</span><span class="p">)</span>
+
+<span class="c1">###################</span>
+
+<span class="k">def</span> <span class="nf">return_json</span><span class="p">(</span><span class="n">cur</span><span class="p">,</span> <span class="n">identifier</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">exact</span><span class="p">,</span> <span class="n">time</span><span class="p">):</span>
+
+    <span class="n">results</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;404: Results with the specified {} were not found.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">identifier</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data</span>
+    <span class="k">else</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;413: Your query has returned &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; results (&gt; 100). If you&#39;re searching a specific &quot;</span> <span class="o">+</span> <span class="n">identifier</span> <span class="o">+</span> \
+                            <span class="s2">&quot;, use the parameter &#39;exact=True&#39;. Otherwise, refine your search to return less results, or head here: https://water.usgs.gov/GIS/huc.html to download mass HUC data.&quot;</span>
+
+            <span class="k">return</span> <span class="n">data</span>
+
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;200 OK&quot;</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;hits&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">time</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; ms.&quot;</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;search on&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;parameter&quot;</span><span class="p">:</span> <span class="n">identifier</span><span class="p">,</span> <span class="s2">&quot;exact&quot;</span><span class="p">:</span> <span class="n">exact</span><span class="p">}</span>
+        <span class="n">data</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="k">if</span> <span class="n">identifier</span> <span class="o">==</span> <span class="s2">&quot;HUC&quot;</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">][</span><span class="n">elem</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{</span>
+                                            <span class="s2">&quot;Region Name&quot;</span><span class="p">:</span><span class="n">elem</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                                            <span class="s2">&quot;Bounding Box&quot;</span><span class="p">:</span> <span class="n">elem</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span>
+                                            <span class="s2">&quot;Convex Hull Polygon&quot;</span><span class="p">:</span><span class="n">elem</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+                                            <span class="s2">&quot;Visvalingam Polygon&quot;</span><span class="p">:</span><span class="n">elem</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+                                            <span class="s2">&quot;USGS Polygon&quot;</span><span class="p">:</span> <span class="p">{</span>
+                                                             <span class="s2">&quot;Object URL&quot;</span><span class="p">:</span> <span class="s2">&quot;https://podaac-feature-translation-service.s3-us-west-2.amazonaws.com/{}.zip&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">elem</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+                                                             <span class="s2">&quot;Source&quot;</span><span class="p">:</span><span class="s2">&quot;ftp://rockyftp.cr.usgs.gov/vdelivery/Datasets/Staged/Hydrography/WBD/HU2/Shape/WBD_{}_HU2_Shape.zip&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">elem</span><span class="p">[</span><span class="mi">0</span><span class="p">][:</span><span class="mi">2</span><span class="p">])</span>
+                                                            <span class="p">}</span>
+                                            <span class="p">}</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+                <span class="n">data</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">][</span><span class="n">elem</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="p">{</span>
+                                            <span class="s2">&quot;HUC&quot;</span><span class="p">:</span><span class="n">elem</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                                            <span class="s2">&quot;Bounding Box&quot;</span><span class="p">:</span> <span class="n">elem</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span>
+                                            <span class="s2">&quot;Convex Hull Polygon&quot;</span><span class="p">:</span><span class="n">elem</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+                                            <span class="s2">&quot;Visvalingam Polygon&quot;</span><span class="p">:</span><span class="n">elem</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span>
+                                            <span class="s2">&quot;USGS Polygon&quot;</span><span class="p">:</span> <span class="p">{</span>
+                                                             <span class="s2">&quot;Object URL&quot;</span><span class="p">:</span> <span class="s2">&quot;https://podaac-feature-translation-service.s3-us-west-2.amazonaws.com/{}.zip&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">elem</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+                                                             <span class="s2">&quot;Source&quot;</span><span class="p">:</span><span class="s2">&quot;ftp://rockyftp.cr.usgs.gov/vdelivery/Datasets/Staged/Hydrography/WBD/HU2/Shape/WBD_{}_HU2_Shape.zip&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">elem</span><span class="p">[</span><span class="mi">0</span><span class="p">][:</span><span class="mi">2</span><span class="p">])</span>
+                                                            <span class="p">}</span>
+                                            <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">data</span>
+
+<span class="k">def</span> <span class="nf">lambda_handler</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This function inserts content into mysql RDS instance</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span> <span class="k">as</span> <span class="n">cur</span><span class="p">:</span>
+
+		<span class="c1"># Start a timer to measure query time.</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+		<span class="c1"># Entered if the user queries by HUC</span>
+        <span class="k">if</span> <span class="s2">&quot;HUC&quot;</span> <span class="ow">in</span> <span class="n">event</span><span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="s2">&quot;exact&quot;</span> <span class="ow">in</span> <span class="n">event</span><span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">]:</span>
+
+            	<span class="c1"># User queries an exact HUC</span>
+                <span class="k">if</span> <span class="n">event</span><span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">][</span><span class="s1">&#39;exact&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;true&quot;</span><span class="p">:</span>
+                    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;select * from huc_table where `HUC` = </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">event</span><span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">][</span><span class="s1">&#39;HUC&#39;</span><span class="p">])</span>
+                    <span class="n">exact</span> <span class="o">=</span> <span class="bp">True</span>
+                <span class="c1"># User queries partial HUC</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;select * from huc_table where `HUC` LIKE </span><span class="si">%s</span><span class="s2"> ORDER BY CHAR_LENGTH(HUC) ASC&quot;</span><span class="p">,</span> <span class="n">event</span><span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">][</span><span class="s1">&#39;HUC&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+                    <span class="n">exact</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="c1"># Default to &quot;partial&quot; case when user doesn&#39;t specific and &quot;exact&quot; value.</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;select * from huc_table where `HUC` LIKE </span><span class="si">%s</span><span class="s2"> ORDER BY CHAR_LENGTH(HUC) ASC&quot;</span><span class="p">,</span> <span class="n">event</span><span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">][</span><span class="s1">&#39;HUC&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+                <span class="n">exact</span> <span class="o">=</span> <span class="bp">False</span>
+
+            <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">return_json</span><span class="p">(</span><span class="n">cur</span><span class="p">,</span> <span class="s2">&quot;HUC&quot;</span><span class="p">,</span> <span class="n">event</span><span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">][</span><span class="s1">&#39;HUC&#39;</span><span class="p">],</span> <span class="n">exact</span><span class="p">,</span> <span class="nb">round</span><span class="p">((</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+		<span class="c1"># Similar process for region</span>
+        <span class="k">elif</span> <span class="s2">&quot;region&quot;</span> <span class="ow">in</span> <span class="n">event</span><span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">]:</span>
+        	<span class="c1"># Handle spaces in request</span>
+            <span class="n">region</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">event</span><span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">][</span><span class="s1">&#39;region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;%20&quot;</span><span class="p">))</span>
+
+            <span class="k">if</span> <span class="s2">&quot;exact&quot;</span> <span class="ow">in</span> <span class="n">event</span><span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">]:</span>
+                <span class="c1"># User queries exact region</span>
+                <span class="k">if</span> <span class="n">event</span><span class="p">[</span><span class="s1">&#39;body&#39;</span><span class="p">][</span><span class="s1">&#39;exact&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;true&quot;</span><span class="p">:</span>
+                    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;select * from fts_table where `Region` = </span><span class="si">%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">region</span><span class="p">)</span>
+                    <span class="n">exact</span> <span class="o">=</span> <span class="bp">True</span>
+                <span class="c1"># User queries partial region match</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;select * from fts_table where `Region` LIKE </span><span class="si">%s</span><span class="s2"> ORDER BY CHAR_LENGTH(HUC) ASC&quot;</span><span class="p">,</span> <span class="n">region</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+                    <span class="n">exact</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">&quot;select * from fts_table where `Region` LIKE </span><span class="si">%s</span><span class="s2"> ORDER BY CHAR_LENGTH(HUC) ASC&quot;</span><span class="p">,</span> <span class="n">region</span> <span class="o">+</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+                <span class="n">exact</span> <span class="o">=</span> <span class="bp">False</span>
+
+            <span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">return_json</span><span class="p">(</span><span class="n">cur</span><span class="p">,</span> <span class="s2">&quot;region&quot;</span><span class="p">,</span> <span class="n">region</span><span class="p">,</span> <span class="n">exact</span><span class="p">,</span> <span class="nb">round</span><span class="p">((</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+        <span class="k">else</span><span class="p">:</span>
+        	<span class="c1"># Return 400 error assuming path is incorrect.</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="n">data</span><span class="p">[</span><span class="s1">&#39;error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;400: The specified URL is invalid (does not exist).&quot;</span>
+            <span class="k">return</span> <span class="n">data</span>
+</pre></div>
+</div>
+</p>
+</details> <br/><p>Copy the code above and create a Python file called <em>fts_lambda.py</em> and add it to the same folder as your <em>pymysql</em> package and <em>rds_config.py</em> file. You should now have <strong>three</strong> files in your <em>fts-lambda/</em> folder: <em>rds_config.py</em>, <em>fts_lambda.py</em>, and the <em>pymysql</em> package folder.</p>
+<p><strong>Note:</strong> You can find a more in-depth description of the Lambda function in the <a class="reference internal" href="../../local_database_creation/HUC/overview.html"><span class="doc">Code Explained</span></a></p>
+<p>Zip these three files in your <em>fts-lambda/</em> folder up using your favorite tool (usually just command + right click all three elements → Compress → Rename fts_lambda.zip), and then navigate to the AWS console:</p>
+<p><a class="reference external" href="http://goto.jpl.nasa.gov/awsconsole">http://goto.jpl.nasa.gov/awsconsole</a></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="upload-lambda-to-aws">
+<h2>Upload Lambda to AWS<a class="headerlink" href="#upload-lambda-to-aws" title="Permalink to this headline">¶</a></h2>
+<p>Once in AWS, type in “Lambda” into the <em>Find Services</em> search bar. Create a new Lambda function. From this point on, let’s hope AWS doesn’t modify their UI so much that the rest of this tutorial is useless.</p>
+<p>Even if the UI does change, the main gist should still be relevant. There is also a great Lynda tutorial for this <a class="reference external" href="https://www.lynda.com/Amazon-Web-Services-tutorials/Create-Lambda-function/746313/777903-4.html?autoplay=true">here</a>. I recommend watching the entire thing, however I’ve linked directly to the Lambda function creation tutorial.</p>
+<p>Click “Author From Scratch”, and add a “Function Name” and call it <em>fts_lambda</em> (or exactly what you named your ZIP file above). Choose the Runtime Environment that suits your application. In the first step, I mentioned I was using Python 3.6. If you’re using something different, it’s probably best to keep with that same version.</p>
+<p>Now <em>Permissions</em> are relatively frustrating with AWS. Under <em>Permissions</em> click:</p>
+<p><strong>Choose or create an execution role</strong> → <strong>Use an existing role</strong> → <strong>podaac-dev-cumulus-lambda-api-gateway</strong></p>
+<hr class="docutils" />
+<p>Now that the Lambda function is created, it’s time to upload the ZIP file we just made. Scroll down until you see an empty window for entering your code. Instead of writing it manually, click the drop down menu labeled <strong>Code entry type</strong> and then click <strong>Upload a ZIP file</strong>. Once it’s uploaded, press “Save” at the top right of your screen.</p>
+<p>If you get an error saying something like “Could not open file: /lambda_function.py”, this just means you didn’t name your Lambda function “lambda_function.py”. Remember, we named it “fts_lambda.py”. So two boxes over from where you uploaded the ZIP file, you’ll see a <em>Handler</em> box. Replace the <strong>lambda_function.lambda_handler</strong> with <strong>fts_lambda.lambda_handler</strong>, and that should fix it.</p>
+<p>Finally, scroll further down the page until you see a Network tab. It should say “No VPC”. Change this to the <strong>same</strong> VPC as the database we made in the previous step (<em>Default VPC (vpc-07a20961)</em>), click on all the subnets individually, and then choose the <strong>same</strong> security group as the database (<em>rds-launch-wizard-9</em>). This is <strong>essential</strong>, and definitely caused some issues for quite a while.</p>
+<p>Once this is done, click save, and you should be good to test the Lambda.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="test-lambda">
+<h2>Test Lambda<a class="headerlink" href="#test-lambda" title="Permalink to this headline">¶</a></h2>
+<p>Now that we’ve uploaded the Lambda function, we can test it. On your Lambda function page, configure a new test event from the drop down menu at the top of your screen (see attached video if you can’t find it).</p>
+<p>Create a new test event named <em>RegionTest</em>, and paste this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;body&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;exact&quot;</span><span class="p">:</span> <span class="s2">&quot;True&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;region&quot;</span><span class="p">:</span> <span class="s2">&quot;Woods Creek-Skykomish River&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>into the empty region. Press “Create” at the bottom. This will create a test case for your Lambda function that tries to query the database by <em>region</em>. I chose “Woods Creek-Skykomish River” arbitrarily, and any name within the HUC database would work.</p>
+<p>If all works correctly, you should see something like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;200 OK&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;hits&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;3.143 ms.&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;search on&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;parameter&quot;</span><span class="p">:</span> <span class="s2">&quot;region&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;exact&quot;</span><span class="p">:</span> <span class="n">true</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;results&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;Woods Creek-Skykomish River&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;HUC&quot;</span><span class="p">:</span> <span class="s2">&quot;1711000907&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Bounding Box&quot;</span><span class="p">:</span> <span class="s2">&quot;-122.03395970747755,47.74851958630143,...&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Visvalingam Polygon&quot;</span><span class="p">:</span> <span class="s2">&quot;-121.96042486071667,48.0266280879531,...,</span>
+      <span class="s2">&quot;USGS Polygon&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;Object URL&quot;</span><span class="p">:</span> <span class="s2">&quot;https://podaac-dev-feature-translation-service.s3-us-west-1.amazonaws.com/1711000907&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Source&quot;</span><span class="p">:</span> <span class="s2">&quot;ftp://rockyftp.cr.usgs.gov/vdelivery/Datasets/Staged/Hydrography/WBD/HU2/Shape/&quot;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and scrolling to the top of the page, you should see a green box that says “Execution result: succeeded”.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api_gateway.html" class="btn btn-neutral float-right" title="API Gateway" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="create_db.html" class="btn btn-neutral float-left" title="Creating an AWS Database" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

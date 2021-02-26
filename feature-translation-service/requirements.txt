@@ -1,0 +1,6 @@
+visvalingamwyatt
+geopandas
+shapely
+pandas
+numpy
+tqdm

@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Overview &mdash; feature-translation-service  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Code Explained" href="code_explained.html" />
+    <link rel="prev" title="Code Explained" href="../HUC/code_explained.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> feature-translation-service
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/downloading.html">Downloading the Data</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HUC Database Creation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../HUC/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HUC/overview.html#creation-procedure">Creation Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HUC/overview.html#run-the-code">Run the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../HUC/code_explained.html">Code Explained</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SWOT Database Creation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#creation-procedure">Creation Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#run-the-code">Run the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_explained.html">Code Explained</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Migrating HUC to AWS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/tutorial/overview.html">Tutorial Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/tutorial/create_db.html">Creating an AWS Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/tutorial/lambda.html">Create Lambda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/tutorial/api_gateway.html">API Gateway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/tutorial/lambda_explained.html">Lambda Explained</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Migrating SWOT to AWS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/swot_tutorial/overview.html">Tutorial Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/swot_tutorial/overview.html#similarities-differences-to-huc">Similarities/Differences to HUC</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/huc/querying.html">Querying the HUC Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/swot/querying.html">Querying the SWOT Dataset</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">feature-translation-service</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Overview</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/chapters/local_database_creation/SWOT/overview.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>Creating the SWOT database locally was very similar to that of the <a class="reference internal" href="../HUC/overview.html"><span class="doc">HUC database creation</span></a> earlier. Similarly, I used <a class="reference external" href="https://pandas.pydata.org/">Pandas</a> to efficiently work with the data, and <a class="reference external" href="http://geopandas.org/">GeoPandas</a> for some nice geospatial functions. In this section, I’ll go over how to use the <em>SWORD</em> database provided by Elizabeth Altenau. I’ll also show how to run the code to generate our SWOT database from this and go more into the code I’ve written in the <a class="reference internal" href="code_explained.html"><span class="doc">Code Explained</span></a> section.</p>
+<p><strong>Important:</strong> I found <a class="reference external" href="https://swot.jpl.nasa.gov/meetings_by_folder.htm?id=1031">this</a> resource useful in learning about the format of SWOT Feature IDs and the SWOT mission as a whole.</p>
+</div>
+<div class="section" id="creation-procedure">
+<h1>Creation Procedure<a class="headerlink" href="#creation-procedure" title="Permalink to this headline">¶</a></h1>
+<p>Navigate to the <em>/SWOT/</em> directory of the cloned repository using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">feature</span><span class="o">-</span><span class="n">translation</span><span class="o">-</span><span class="n">service</span><span class="o">/</span><span class="n">SWOT</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Here you will see a <strong><em>create_swot_dataset.py</em></strong> file. Running this code requires that you have <strong>two</strong> input parameters: the input directory (containing the SWORD database) and the output directory where the final database (.csv file) will be written to.</p>
+<ul class="simple">
+<li><p>-i [input directory]</p></li>
+<li><p>-o [output directory]</p></li>
+</ul>
+<p><strong>Important</strong>: I was given a ZIP file named <strong><em>NA_MergedDB_v02</em></strong> that contained a single shapefile (and its necessary counterparts) that defined the entire SWORD database. In order to not make any assumptions about the structure of future SWOT data, I simply extracted this ZIP file and placed the resulting folder in a directory I created called <strong><em>SWOT_Data/</em></strong>. Thus, the directory structure looks as follows:</p>
+<p>feature-translation-service/ </br>
+|—— SWOT/ </br>
+|———— SWOT_Data/ </br>
+|—————— NA_MergedDB_v02/ </br>
+|———————— NA_MergedDB_v02.shp </br>
+|———————— NA_MergedDB_v02.dbf </br>
+|———————— NA_MergedDB_v02.shx </br>
+|———————— NA_MergedDB_v02.prj </br>
+|———————— NA_MergedDB_v02.nc </br></p>
+<p>This way, any future SWOT shapefile information can be directly put into the <em>SWOT_Data/</em> folder similarly to that of the <em>NA_MergedDB_v02</em> data.</p>
+<p>Once you’ve extracted the SWORD database (or other databases) as shown above, you can run the code below.</p>
+</div>
+<div class="section" id="run-the-code">
+<h1>Run the Code<a class="headerlink" href="#run-the-code" title="Permalink to this headline">¶</a></h1>
+<p>As an example, you might run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">create_SWOT_dataset</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">i</span> <span class="s2">&quot;SWOT_Data/&quot;</span> <span class="o">-</span><span class="n">o</span> <span class="s2">&quot;Database/&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">create_SWOT_dataset</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">i</span> <span class="s2">&quot;SWOT_Data/&quot;</span> <span class="o">-</span><span class="n">o</span> <span class="s2">&quot;path/to/Desktop/folder/&quot;</span>
+</pre></div>
+</div>
+<p>Running this code will generate a SWOT database for <strong>all</strong> SWOT data included in the input directory. You will see a .csv named “SWOT_data.csv” appear in the output directory you specified through the command line when the program has finished.</p>
+<p>This .csv file can then be directly uploaded to AWS through the many techniques. I will go into all AWS-related tasks in the <a class="reference internal" href="../../migrating_to_aws/tutorial/overview.html"><span class="doc">Migrating to AWS</span></a> section later.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="code_explained.html" class="btn btn-neutral float-right" title="Code Explained" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../HUC/code_explained.html" class="btn btn-neutral float-left" title="Code Explained" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

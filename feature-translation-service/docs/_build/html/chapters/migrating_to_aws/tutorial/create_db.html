@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Creating an AWS Database &mdash; feature-translation-service  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Create Lambda" href="lambda.html" />
+    <link rel="prev" title="Tutorial Overview" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> feature-translation-service
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/downloading.html">Downloading the Data</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HUC Database Creation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/HUC/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/HUC/overview.html#creation-procedure">Creation Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/HUC/overview.html#run-the-code">Run the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/HUC/code_explained.html">Code Explained</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SWOT Database Creation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/SWOT/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/SWOT/overview.html#creation-procedure">Creation Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/SWOT/overview.html#run-the-code">Run the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/SWOT/code_explained.html">Code Explained</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Migrating HUC to AWS</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Tutorial Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Creating an AWS Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lambda.html">Create Lambda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_gateway.html">API Gateway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lambda_explained.html">Lambda Explained</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Migrating SWOT to AWS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../swot_tutorial/overview.html">Tutorial Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../swot_tutorial/overview.html#similarities-differences-to-huc">Similarities/Differences to HUC</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/huc/querying.html">Querying the HUC Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/swot/querying.html">Querying the SWOT Dataset</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">feature-translation-service</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Creating an AWS Database</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/chapters/migrating_to_aws/tutorial/create_db.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="creating-an-aws-database">
+<h1>Creating an AWS Database<a class="headerlink" href="#creating-an-aws-database" title="Permalink to this headline">¶</a></h1>
+<p>In the last section, we created a local database and exported it to a .csv file named “HUC_data.csv”. This is the file we will add to a mySQL database. Here, we will create the database itself, assign permissions specific to PO.DAAC, and then populate the database with our HUC data.</p>
+<hr class="docutils" />
+<p><strong>Note:</strong> Again, let’s hope AWS doesn’t change their UI too incredibly much. If this tutorial is no longer valid, I’d recommend trying to create the database through the command line instead by following <a class="reference external" href="https://www.isc.upenn.edu/accessing-mysql-databases-aws-python-lambda-function">this</a> tutorial.</p>
+<p>In order to access PO.DAAC through the command line, you’ll need to generate keys through JPL. You’ll first need to run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">awscli</span>
+</pre></div>
+</div>
+<p>to install the command line tool if you don’t have it already installed. You’ll then need to clone <a class="reference external" href="https://podaac-git.jpl.nasa.gov:8443/aws/access-keys">this repo</a>, and run the <strong><em>generateTempAccessKey.py</em></strong> file. It’ll ask for your JPL username and password, and, if entered correctly, will give you access to PO.DAAC’s AWS services through the command line for around <strong>1 hour</strong>.</p>
+<hr class="docutils" />
+<p>Back to the tutorial though:</p>
+<p>As mentioned in the <em>Tutorial Overview</em> section, I’ve created a video tutorial that will walk you step-by-step how to create the AWS database. I felt a pure video tutorial was necessary for this section because it’s mostly done on the AWS website. We’ll be pressing a lot of buttons, and I feel seeing it visually is a lot better than writing it out here. The video can be found <a class="reference external" href="https://drive.google.com/open?id=1rNfWO3NuX53jynmMZaTi5JPj0FRvnNGp">here</a>.</p>
+<p><strong>Note:</strong> Not covered in the video is the idea of creating indices mySQL databases. This is essential for quick access. More information on that can be found <a class="reference external" href="https://dev.mysql.com/doc/refman/8.0/en/create-index.html">here</a>.</p>
+<p>After following the database creation part of this video tutorial, you should have a database populated with HUC data. It is now time to create the Lambda function used to query our newly created database.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="lambda.html" class="btn btn-neutral float-right" title="Create Lambda" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="overview.html" class="btn btn-neutral float-left" title="Tutorial Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

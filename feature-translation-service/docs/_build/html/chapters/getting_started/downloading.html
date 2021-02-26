@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Downloading the Data &mdash; feature-translation-service  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Overview" href="../local_database_creation/HUC/overview.html" />
+    <link rel="prev" title="Requirements" href="requirements.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> feature-translation-service
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../about.html">About</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="requirements.html">Requirements</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Downloading the Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#downloading-usgs-huc-data">Downloading USGS HUC Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#downloading-example-swot-data">Downloading Example SWOT Data</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">HUC Database Creation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../local_database_creation/HUC/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local_database_creation/HUC/overview.html#creation-procedure">Creation Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local_database_creation/HUC/overview.html#run-the-code">Run the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local_database_creation/HUC/code_explained.html">Code Explained</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SWOT Database Creation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../local_database_creation/SWOT/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local_database_creation/SWOT/overview.html#creation-procedure">Creation Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local_database_creation/SWOT/overview.html#run-the-code">Run the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../local_database_creation/SWOT/code_explained.html">Code Explained</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Migrating HUC to AWS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../migrating_to_aws/tutorial/overview.html">Tutorial Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../migrating_to_aws/tutorial/create_db.html">Creating an AWS Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../migrating_to_aws/tutorial/lambda.html">Create Lambda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../migrating_to_aws/tutorial/api_gateway.html">API Gateway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../migrating_to_aws/tutorial/lambda_explained.html">Lambda Explained</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Migrating SWOT to AWS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../migrating_to_aws/swot_tutorial/overview.html">Tutorial Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../migrating_to_aws/swot_tutorial/overview.html#similarities-differences-to-huc">Similarities/Differences to HUC</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/huc/querying.html">Querying the HUC Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/swot/querying.html">Querying the SWOT Dataset</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">feature-translation-service</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Downloading the Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/chapters/getting_started/downloading.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="downloading-the-data">
+<h1>Downloading the Data<a class="headerlink" href="#downloading-the-data" title="Permalink to this headline">¶</a></h1>
+<p>Here we will download the HUC data from the <a class="reference external" href="https://water.usgs.gov/GIS/huc.html">USGS Watershed Boundary Dataset</a> FTP service. This dataset is broken into 22 distinct regions (and 22 associated ZIP files). I have chosen to use shapefile data instead of GDB data as I felt it was easier to work with and extract information from. Also, I will point you toward resources that provided example SWOT data for me during the testing of the SWOT portion of this service.</p>
+<hr class="docutils" />
+<hr class="docutils" />
+<div class="section" id="downloading-usgs-huc-data">
+<h2>Downloading USGS HUC Data<a class="headerlink" href="#downloading-usgs-huc-data" title="Permalink to this headline">¶</a></h2>
+<p>I have provided a file <strong><em>download_data.py</em></strong> that extracts <em>all</em> ZIP files and places their contents within a local directory called <em>HUC_Data/</em> inside the cloned repository.</p>
+<p>Navigate to the file <em>download_data.py</em> found in the HUC directory of the cloned repository with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">feature</span><span class="o">-</span><span class="n">translation</span><span class="o">-</span><span class="n">service</span><span class="o">/</span><span class="n">HUC</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>and run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">download_data</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>This may take a while as the dataset is quite large. Once the program has finished, you will see the new subdirectory <em>HUC_Data/</em> with 22 folders named:</p>
+<ul class="simple">
+<li><p>WBD_01_HU2_Shape</p></li>
+<li><p>WBD_02_HU2_Shape</p></li>
+<li><p>…</p></li>
+<li><p>WBD_22_HU2_Shape</p></li>
+</ul>
+<hr class="docutils" />
+<p>If, for some reason you do not see this, try directly connecting to the <a class="reference external" href="ftp://rockyftp.cr.usgs.gov/vdelivery/Datasets/Staged/Hydrography/WBD/HU2/Shape/">FTP Service</a> or navigate <a class="reference external" href="https://water.usgs.gov/GIS/huc.html">here</a> and the link for the dataset will be at the <em>very</em> bottom of the page.</p>
+<hr class="docutils" />
+</div>
+<hr class="docutils" />
+<div class="section" id="downloading-example-swot-data">
+<h2>Downloading Example SWOT Data<a class="headerlink" href="#downloading-example-swot-data" title="Permalink to this headline">¶</a></h2>
+<p>I obtained example SWOT data through the help of Mike Gangl. He contacted Elizabeth Altenau, a postdoctoral scholar at The University of North Carolina at Chapel Hill, who has been working toward building example SWOT data in the <em>SWORD</em> dataset. The database contained 30m point resolutions of only North America, thus it is not in the final SWOT line and 200m point formats. Nonetheless, it has been a great tool to prototype the Feature Translation Service on. In order to obtain this data, you should either contact Mike, or go to Elizabeth directly. Their emails can be found below:</p>
+<p>Mike Gangl (michael.e.gangl&#64;jpl.nasa.gov) <br/>
+Elizabeth Altenau (ealtenau&#64;unc.edu)</p>
+<hr class="docutils" />
+<p>Next, we will go over creating the HUC and SWOT dataset from the downloaded data.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../local_database_creation/HUC/overview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="requirements.html" class="btn btn-neutral float-left" title="Requirements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

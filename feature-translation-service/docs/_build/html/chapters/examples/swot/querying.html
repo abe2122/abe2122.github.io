@@ -1,0 +1,583 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Querying the SWOT Dataset &mdash; feature-translation-service  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="prev" title="Querying the HUC Dataset" href="../huc/querying.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> feature-translation-service
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/downloading.html">Downloading the Data</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HUC Database Creation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/HUC/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/HUC/overview.html#creation-procedure">Creation Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/HUC/overview.html#run-the-code">Run the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/HUC/code_explained.html">Code Explained</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SWOT Database Creation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/SWOT/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/SWOT/overview.html#creation-procedure">Creation Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/SWOT/overview.html#run-the-code">Run the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../local_database_creation/SWOT/code_explained.html">Code Explained</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Migrating HUC to AWS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/tutorial/overview.html">Tutorial Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/tutorial/create_db.html">Creating an AWS Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/tutorial/lambda.html">Create Lambda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/tutorial/api_gateway.html">API Gateway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/tutorial/lambda_explained.html">Lambda Explained</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Migrating SWOT to AWS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/swot_tutorial/overview.html">Tutorial Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/swot_tutorial/overview.html#similarities-differences-to-huc">Similarities/Differences to HUC</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../huc/querying.html">Querying the HUC Dataset</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Querying the SWOT Dataset</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">feature-translation-service</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Querying the SWOT Dataset</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/chapters/examples/swot/querying.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="querying-the-swot-dataset">
+<h1>Querying the SWOT Dataset<a class="headerlink" href="#querying-the-swot-dataset" title="Permalink to this headline">¶</a></h1>
+<p>As input to the query, we <em>require</em> either a “SWOT Feature ID”. As of now, this identifier is built using information in the SWORD database of example SWOT data. More information on how this Feature ID is generated can be found in the associated Jupyter notebook <em>Create SWOT Database.ipynb</em>. In the future, there will be a standardized way of generating SWOT Feature IDs, thus it will require updating our present SWOT database.</p>
+<p>Furthermore, at this moment, CMR does not support OR’ing multiple spatial parameters. This is necessary to the success of querying CMR for SWOT data, thus it is actively being looked into by developers at CMR. For questions/updates regarding this, a good contact is Lewis McGibbney (lewis.j.mcgibbney&#64;jpl.nasa.gov). For now, you can extract information from the API call returns a string that might look as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;point=-121.9770366732242,39.18799113833964&amp;point=-121.9767090807306,39.18785702031573&quot;</span>
+</pre></div>
+</div>
+<p>which can directly be used to query CMR (see the first example below), however this isn’t technically the correct query as these results are AND’d together rather than OR’d. To remedy this, I’ve included a single line in the Lambda function:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TO_JSON</span> <span class="o">=</span> <span class="kc">False</span>     <span class="c1"># Modify to &quot;True&quot; once CMR JSON POST support is available.</span>
+</pre></div>
+</div>
+<p>that can be changed to “True” once support for this feature has been integrated, and this will automatically format results appropriately. For example, the above list of points will become:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;condition&quot;</span><span class="p">:</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;or&quot;</span><span class="p">:</span>
+    <span class="p">[</span>
+      <span class="p">{</span><span class="s2">&quot;point&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">121.9770366732242</span><span class="p">,</span><span class="mf">39.18799113833964</span><span class="p">]},</span>
+      <span class="p">{</span><span class="s2">&quot;point&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">121.9767090807306</span><span class="p">,</span><span class="mf">39.18785702031573</span><span class="p">]}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>which appropriately OR’s geometries. This can then be queried via:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">XPOST</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">cmr</span><span class="o">.</span><span class="n">earthdata</span><span class="o">.</span><span class="n">nasa</span><span class="o">.</span><span class="n">gov</span><span class="o">/</span><span class="n">search</span><span class="o">/</span><span class="n">collections</span> <span class="o">-</span><span class="n">d</span> <span class="nd">@data</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+<p>where <em>data.json</em> is the above response.</p>
+<hr class="docutils" />
+<p>Optionally, you can include a parameter “exact = True” that tells us you want to search for <em>exactly</em> the Feature ID you’ve entered. You may also include “exact=False” to search for <em>partial</em> matches, however it defaults to this search option automatically.</p>
+<p>Below are some examples I’ve put together to display how you can interact with the SWOT portion of the Feature Translation Service.</p>
+<p>Querying an <em>exact</em> SWOT Feature ID:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1">###################</span>
+
+<span class="c1"># Mimicing a user querying exact matches with SWOT Feature ID &quot;7541140001000000&quot;</span>
+
+<span class="n">SWOT_FEATURE_ID</span> <span class="o">=</span> <span class="s2">&quot;7541140001000000&quot;</span>
+<span class="n">EXACT</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="c1">###################</span>
+
+<span class="c1"># Query Feature Translation Service and parse JSON response</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://g6zl7z2x7j.execute-api.us-west-2.amazonaws.com/prod/swot/{}?exact={}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">SWOT_FEATURE_ID</span><span class="p">,</span> <span class="n">EXACT</span><span class="p">))</span>
+
+<span class="c1"># Load response from FTS</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="c1"># Print all elements in HUC database that exactly match HUC &quot;180500030105&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">indent</span> <span class="o">=</span> <span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+<details><summary>Click to expand output:</summary>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;200 OK&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;hits&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;1.09 ms.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;search on&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;parameter&quot;</span><span class="p">:</span> <span class="s2">&quot;SWOT Feature ID&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;exact&quot;</span><span class="p">:</span> <span class="n">true</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;results&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;7541140001000000&quot;</span><span class="p">:</span> <span class="s2">&quot;point=-83.62575151546879,9.252305471126416&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</p>
+</details><br/><hr class="docutils" />
+<p>Querying by <em>partial</em> SWOT Feature ID:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">###################</span>
+
+<span class="c1"># Mimicing a user querying partial matches with SWOT Feature ID &quot;75411400010000&quot;</span>
+
+<span class="n">SWOT_FEATURE_ID</span> <span class="o">=</span> <span class="s2">&quot;75411400010000&quot;</span>
+<span class="n">EXACT</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="c1">###################</span>
+
+<span class="c1"># Query Feature Translation Service and parse JSON response</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://g6zl7z2x7j.execute-api.us-west-2.amazonaws.com/prod/swot/{}?exact={}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">SWOT_FEATURE_ID</span><span class="p">,</span> <span class="n">EXACT</span><span class="p">))</span>
+
+<span class="c1"># Load response from FTS</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="c1"># Print all elements in HUC database that exactly match HUC &quot;180500030105&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">indent</span> <span class="o">=</span> <span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+<details><summary>Click to expand output:</summary>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;200 OK&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;hits&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="s2">&quot;time&quot;</span><span class="p">:</span> <span class="s2">&quot;1.613 ms.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;search on&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;parameter&quot;</span><span class="p">:</span> <span class="s2">&quot;SWOT Feature ID&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;exact&quot;</span><span class="p">:</span> <span class="n">false</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;results&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;75411400010000&quot;</span><span class="p">:</span> <span class="s2">&quot;point=-83.62575151546879,9.252305471126416&amp;point=-83.62575352733344,9.252576533363468&amp;point=-83.62564640094489,9.252848395107943&amp;point=-83.62553927444125,9.253120256862395&amp;point=-83.62543214782254,9.253392118626815&amp;point=-83.62527045178793,9.253664380130763&amp;point=-83.62510875554258,9.253936641627057&amp;point=-83.62489208736692,9.254155090331341&amp;point=-83.62467461434254,9.254265113998752&amp;point=-83.62440257170697,9.25437553719889&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</p>
+</details><br/><hr class="docutils" />
+<p>Finally, we can use this output from the Feature Translation Service to query CMR for us. This can be seen below:</p>
+<p>Query CMR via SWOT Feature ID string:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1">###################</span>
+
+<span class="c1"># Mimicing a user querying exact matches with SWOT Feature ID &quot;75411400010000&quot;</span>
+
+<span class="n">COLLECTION_ID</span> <span class="o">=</span> <span class="s2">&quot;C1522341104-NSIDC_ECS&quot;</span> <span class="c1"># SMAP/Sentinel-1 L2 Radiometer/Radar 30-Second Scene 3 km EASE-Grid Soil Moisture V002</span>
+<span class="n">SWOT_FEATURE_ID</span> <span class="o">=</span> <span class="s2">&quot;75411400010000&quot;</span>
+<span class="n">EXACT</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="c1">###################</span>
+
+<span class="c1"># Query Feature Translation Service and parse JSON response</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://g6zl7z2x7j.execute-api.us-west-2.amazonaws.com/prod/swot/{}?exact={}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">SWOT_FEATURE_ID</span><span class="p">,</span> <span class="n">EXACT</span><span class="p">))</span>
+
+<span class="c1"># Load response from FTS</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="n">geo_list</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">][</span><span class="n">SWOT_FEATURE_ID</span><span class="p">]</span>
+<span class="c1">#print(geo_list)</span>
+
+<span class="c1"># Query CMR</span>
+<span class="c1"># --------- #</span>
+
+<span class="c1">#cmr_response = requests.get(&quot;https://cmr.earthdata.nasa.gov/search/granules.json?{}&amp;echo_collection_id=C1522341104-NSIDC_ECS&amp;pretty=True&quot;.format(polygon))</span>
+<span class="n">cmr_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://cmr.earthdata.nasa.gov/search/granules?{}&amp;echo_collection_id={}&amp;pretty=True&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">geo_list</span><span class="p">,</span> <span class="n">COLLECTION_ID</span><span class="p">))</span>
+
+<span class="c1"># --------- #</span>
+
+<span class="c1"># Make it look nice</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">cmr_response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">features</span> <span class="o">=</span> <span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
+</pre></div>
+</div>
+<details><summary>Click to expand output:</summary>
+<p><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;html&gt;
+ &lt;body&gt;
+  &lt;results&gt;
+   &lt;hits&gt;
+    287
+   &lt;/hits&gt;
+   &lt;took&gt;
+    102
+   &lt;/took&gt;
+   &lt;references&gt;
+    &lt;reference&gt;
+     &lt;name&gt;
+      SC:SPL2SMAP_S.002:142143638
+     &lt;/name&gt;
+     &lt;id&gt;
+      G1568764227-NSIDC_ECS
+     &lt;/id&gt;
+     &lt;location&gt;
+      https://cmr.earthdata.nasa.gov:443/search/concepts/G1568764227-NSIDC_ECS/6
+     &lt;/location&gt;
+     &lt;revision-id&gt;
+      6
+     &lt;/revision-id&gt;
+    &lt;/reference&gt;
+    &lt;reference&gt;
+     &lt;name&gt;
+      SC:SPL2SMAP_S.002:135678909
+     &lt;/name&gt;
+     &lt;id&gt;
+      G1542789106-NSIDC_ECS
+     &lt;/id&gt;
+     &lt;location&gt;
+      https://cmr.earthdata.nasa.gov:443/search/concepts/G1542789106-NSIDC_ECS/8
+     &lt;/location&gt;
+     &lt;revision-id&gt;
+      8
+     &lt;/revision-id&gt;
+    &lt;/reference&gt;
+    &lt;reference&gt;
+     &lt;name&gt;
+      SC:SPL2SMAP_S.002:135678915
+     &lt;/name&gt;
+     &lt;id&gt;
+      G1542789112-NSIDC_ECS
+     &lt;/id&gt;
+     &lt;location&gt;
+      https://cmr.earthdata.nasa.gov:443/search/concepts/G1542789112-NSIDC_ECS/8
+     &lt;/location&gt;
+     &lt;revision-id&gt;
+      8
+     &lt;/revision-id&gt;
+    &lt;/reference&gt;
+    &lt;reference&gt;
+     &lt;name&gt;
+      SC:SPL2SMAP_S.002:135811869
+     &lt;/name&gt;
+     &lt;id&gt;
+      G1544249045-NSIDC_ECS
+     &lt;/id&gt;
+     &lt;location&gt;
+      https://cmr.earthdata.nasa.gov:443/search/concepts/G1544249045-NSIDC_ECS/6
+     &lt;/location&gt;
+     &lt;revision-id&gt;
+      6
+     &lt;/revision-id&gt;
+    &lt;/reference&gt;
+    &lt;reference&gt;
+     &lt;name&gt;
+      SC:SPL2SMAP_S.002:135811942
+     &lt;/name&gt;
+     &lt;id&gt;
+      G1544249076-NSIDC_ECS
+     &lt;/id&gt;
+     &lt;location&gt;
+      https://cmr.earthdata.nasa.gov:443/search/concepts/G1544249076-NSIDC_ECS/6
+     &lt;/location&gt;
+     &lt;revision-id&gt;
+      6
+     &lt;/revision-id&gt;
+    &lt;/reference&gt;
+    &lt;reference&gt;
+     &lt;name&gt;
+      SC:SPL2SMAP_S.002:140560057
+     &lt;/name&gt;
+     &lt;id&gt;
+      G1559612355-NSIDC_ECS
+     &lt;/id&gt;
+     &lt;location&gt;
+      https://cmr.earthdata.nasa.gov:443/search/concepts/G1559612355-NSIDC_ECS/6
+     &lt;/location&gt;
+     &lt;revision-id&gt;
+      6
+     &lt;/revision-id&gt;
+    &lt;/reference&gt;
+    &lt;reference&gt;
+     &lt;name&gt;
+      SC:SPL2SMAP_S.002:140560049
+     &lt;/name&gt;
+     &lt;id&gt;
+      G1559612351-NSIDC_ECS
+     &lt;/id&gt;
+     &lt;location&gt;
+      https://cmr.earthdata.nasa.gov:443/search/concepts/G1559612351-NSIDC_ECS/6
+     &lt;/location&gt;
+     &lt;revision-id&gt;
+      6
+     &lt;/revision-id&gt;
+    &lt;/reference&gt;
+    &lt;reference&gt;
+     &lt;name&gt;
+      SC:SPL2SMAP_S.002:141401314
+     &lt;/name&gt;
+     &lt;id&gt;
+      G1565102054-NSIDC_ECS
+     &lt;/id&gt;
+     &lt;location&gt;
+      https://cmr.earthdata.nasa.gov:443/search/concepts/G1565102054-NSIDC_ECS/6
+     &lt;/location&gt;
+     &lt;revision-id&gt;
+      6
+     &lt;/revision-id&gt;
+    &lt;/reference&gt;
+    &lt;reference&gt;
+     &lt;name&gt;
+      SC:SPL2SMAP_S.002:141401155
+     &lt;/name&gt;
+     &lt;id&gt;
+      G1565101436-NSIDC_ECS
+     &lt;/id&gt;
+     &lt;location&gt;
+      https://cmr.earthdata.nasa.gov:443/search/concepts/G1565101436-NSIDC_ECS/6
+     &lt;/location&gt;
+     &lt;revision-id&gt;
+      6
+     &lt;/revision-id&gt;
+    &lt;/reference&gt;
+    &lt;reference&gt;
+     &lt;name&gt;
+      SC:SPL2SMAP_S.002:138547962
+     &lt;/name&gt;
+     &lt;id&gt;
+      G1549592327-NSIDC_ECS
+     &lt;/id&gt;
+     &lt;location&gt;
+      https://cmr.earthdata.nasa.gov:443/search/concepts/G1549592327-NSIDC_ECS/6
+     &lt;/location&gt;
+     &lt;revision-id&gt;
+      6
+     &lt;/revision-id&gt;
+    &lt;/reference&gt;
+   &lt;/references&gt;
+  &lt;/results&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+</p>
+</details><br/><p><strong>Important:</strong> Again, this example above is technically incorrect as it AND’s queries instead of OR’s. That said, once CMR JSON support is available, you can access the JSON via the <strong>same</strong> <em>geo_list</em> variable in the above code.</p>
+<hr class="docutils" />
+<p>Most importantly, once CMR JSON POST’ing is supported, you can use the following code to create the JSON and POST it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1">###################</span>
+
+<span class="c1"># Mimicing a user querying exact matches with SWOT Feature ID &quot;75411400010000&quot;</span>
+
+<span class="n">COLLECTION_ID</span> <span class="o">=</span> <span class="s2">&quot;C1522341104-NSIDC_ECS&quot;</span> <span class="c1"># SMAP/Sentinel-1 L2 Radiometer/Radar 30-Second Scene 3 km EASE-Grid Soil Moisture V002</span>
+<span class="n">SWOT_FEATURE_ID</span> <span class="o">=</span> <span class="s2">&quot;75411400010000&quot;</span>
+<span class="n">EXACT</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="c1">###################</span>
+
+<span class="c1"># Query Feature Translation Service and parse JSON response</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://g6zl7z2x7j.execute-api.us-west-2.amazonaws.com/prod/swot/{}?exact={}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">SWOT_FEATURE_ID</span><span class="p">,</span> <span class="n">EXACT</span><span class="p">))</span>
+
+<span class="c1"># Load response from FTS</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="n">json_response</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="s1">&#39;results&#39;</span><span class="p">][</span><span class="n">SWOT_FEATURE_ID</span><span class="p">]</span>
+<span class="c1">#print(json_response)</span>
+
+<span class="c1"># Query CMR</span>
+<span class="c1"># --------- #</span>
+
+<span class="c1">#cmr_response = requests.post(&quot;https://cmr.earthdata.nasa.gov/search/granules?echo_collection_id={}&amp;pretty=True&quot;.format(COLLECTION_ID), data = json_response)</span>
+<span class="n">cmr_response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;https://cmr.earthdata.nasa.gov/search/granules?echo_collection_id={}&amp;pretty=True&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">COLLECTION_ID</span><span class="p">),</span> <span class="n">data</span> <span class="o">=</span> <span class="n">json_response</span><span class="p">)</span>
+
+<span class="c1"># --------- #</span>
+
+<span class="c1"># Make it look nice</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">cmr_response</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="n">features</span> <span class="o">=</span> <span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">prettify</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>As of now, this throws an error, however once POST’ing is supported, this should query via JSON response.</p>
+<hr class="docutils" />
+<p>So you can see that querying by <em>SWOT Feature ID</em> is nearly identical to querying by <em>HUC</em> or <em>Region</em> identifiers.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../huc/querying.html" class="btn btn-neutral float-left" title="Querying the HUC Dataset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

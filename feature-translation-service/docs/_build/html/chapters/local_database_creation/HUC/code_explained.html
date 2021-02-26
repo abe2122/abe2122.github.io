@@ -1,0 +1,382 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Code Explained &mdash; feature-translation-service  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Overview" href="../SWOT/overview.html" />
+    <link rel="prev" title="Overview" href="overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> feature-translation-service
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about.html">About</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/requirements.html">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/downloading.html">Downloading the Data</a></li>
+</ul>
+<p class="caption"><span class="caption-text">HUC Database Creation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#creation-procedure">Creation Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview.html#run-the-code">Run the Code</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Code Explained</a></li>
+</ul>
+<p class="caption"><span class="caption-text">SWOT Database Creation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../SWOT/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SWOT/overview.html#creation-procedure">Creation Procedure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SWOT/overview.html#run-the-code">Run the Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SWOT/code_explained.html">Code Explained</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Migrating HUC to AWS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/tutorial/overview.html">Tutorial Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/tutorial/create_db.html">Creating an AWS Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/tutorial/lambda.html">Create Lambda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/tutorial/api_gateway.html">API Gateway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/tutorial/lambda_explained.html">Lambda Explained</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Migrating SWOT to AWS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/swot_tutorial/overview.html">Tutorial Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../migrating_to_aws/swot_tutorial/overview.html#similarities-differences-to-huc">Similarities/Differences to HUC</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/huc/querying.html">Querying the HUC Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/swot/querying.html">Querying the SWOT Dataset</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">feature-translation-service</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Code Explained</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/chapters/local_database_creation/HUC/code_explained.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="code-explained">
+<h1>Code Explained<a class="headerlink" href="#code-explained" title="Permalink to this headline">¶</a></h1>
+<p>This section will purely be dedicated to me explaining some of the code that I’ve written that might need more clarification than just a comment in the code. It will primarily center around <a class="reference external" href="https://pandas.pydata.org/">Pandas</a> code found within the <em>simplify_HUC.py</em> file, however I’ll briefly touch on other functions where it may not be exactly clear what’s going on.</p>
+<hr class="docutils" />
+<hr class="docutils" />
+<p>Within <em>create_HUC_dataset.py</em>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">HUC_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">in_dir</span><span class="p">):</span>
+    <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.shp&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">file</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;WBDHU&quot;</span><span class="p">):</span>
+            <span class="n">HUC_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="nb">file</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">HUC_list</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;No shapefiles found. Make sure you have a directory of HUC subfolders in place.&quot;</span><span class="p">)</span>
+    <span class="nb">exit</span><span class="p">()</span>
+
+<span class="c1"># Create local directory at &#39;output directory&#39; location if it doesn&#39;t already</span>
+<span class="c1"># exist</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">out_dir</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">out_dir</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Given some input directory provided, this will extract a list of <em>all</em> paths to HUC shapefiles downloaded using <em>download_data.py</em> in the in <a class="reference internal" href="../../getting_started/downloading.html"><span class="doc">Downloading the Data</span></a> section above. These paths can then be used to combine <em>all</em> shapefiles into one common database.</p>
+<hr class="docutils" />
+<hr class="docutils" />
+<p>Within <em>simplify_HUC.py</em>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">write_to_shapefiles</span><span class="p">(</span><span class="n">multi_geometry</span><span class="p">,</span> <span class="n">HUC</span><span class="p">,</span> <span class="n">shapefile_location</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Write all unsimplified geometries to shapefile with name as HUC&#39;&#39;&#39;</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="c1"># Convert to GeoSeries to be able to convert geometry to shapefile</span>
+        <span class="n">geometry</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">(</span><span class="n">multi_geometry</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">shapefile_location</span> <span class="o">+</span> <span class="n">HUC</span><span class="p">)</span>  <span class="c1"># Make a directory with name = HUC</span>
+        <span class="n">geometry</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="n">shapefile_location</span> <span class="o">+</span> <span class="s1">&#39;{}/{}.shp&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">HUC</span><span class="p">,</span> <span class="n">HUC</span><span class="p">))</span>
+    <span class="k">except</span> <span class="n">FileExistsError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span> <span class="c1"># Race condition may occur with Pandas apply</span>
+        <span class="n">geometry</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">(</span><span class="n">multi_geometry</span><span class="p">)</span>
+        <span class="n">geometry</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="n">shapefile_location</span> <span class="o">+</span> <span class="s1">&#39;{}/{}.shp&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">HUC</span><span class="p">,</span> <span class="n">HUC</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The code above creates shapefiles of each entry in the USGS Watershed Boundary Dataset and stores them in their own folder with the <em>HUC</em> as the name of the folder. This try/except block is required as I’d on occasion obtain a FileExistsError when writing to the folder. I chalked this up to a race condition as Pandas parallelizes writing to directories, as that really shouldn’t have been an error. The except block does catch the error with a slight sleep() command.</p>
+<hr class="docutils" />
+<hr class="docutils" />
+<p>Within <em>simplify_HUC.py</em>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">simplify</span><span class="p">(</span><span class="n">multi_geometry</span><span class="p">,</span> <span class="n">single_geometry</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">max_vertices</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Function that takes in a polygon and returns a simplified version taking</span>
+<span class="sd">    the convex hull of the region.&#39;&#39;&#39;</span>
+
+    <span class="c1"># Convert to GeoPandas Series and perform convex hull operation</span>
+    <span class="n">polygons</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoSeries</span><span class="p">(</span><span class="n">multi_geometry</span><span class="p">)</span>
+    <span class="n">polygons_hull</span> <span class="o">=</span> <span class="n">polygons</span><span class="o">.</span><span class="n">convex_hull</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+
+    <span class="c1"># Format into CMR queryable polygon</span>
+    <span class="n">complex_hull_CMR_poly</span> <span class="o">=</span> <span class="n">format_polygon</span><span class="p">(</span><span class="n">polygons_hull</span><span class="p">)</span>
+
+    <span class="c1">#######################</span>
+
+    <span class="c1"># Map the reduction of vertices to a tanh function</span>
+    <span class="n">reduction</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">max_vertices</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">tanh</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="n">max_vertices</span><span class="p">)</span> <span class="o">*</span> <span class="n">length</span><span class="p">))</span>
+
+    <span class="c1"># Initial simplification</span>
+    <span class="n">points</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">single_geometry</span><span class="o">.</span><span class="n">exterior</span><span class="o">.</span><span class="n">coords</span><span class="p">)</span>
+    <span class="n">simplifier</span> <span class="o">=</span> <span class="n">vw</span><span class="o">.</span><span class="n">Simplifier</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+
+    <span class="n">visval_poly_points</span> <span class="o">=</span> <span class="n">simplifier</span><span class="o">.</span><span class="n">simplify</span><span class="p">(</span><span class="n">number</span> <span class="o">=</span> <span class="n">reduction</span><span class="p">)</span>
+    <span class="n">visval_poly</span> <span class="o">=</span> <span class="n">Polygon</span><span class="p">(</span><span class="n">visval_poly_points</span><span class="p">)</span>
+    <span class="n">visval_CMR_poly</span> <span class="o">=</span> <span class="n">format_polygon</span><span class="p">(</span><span class="n">visval_poly</span><span class="p">)</span>
+
+    <span class="c1">######################</span>
+
+    <span class="n">bbox</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">polygons_hull</span><span class="o">.</span><span class="n">bounds</span><span class="p">)</span>
+    <span class="n">CMR_bbox</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[()\s+]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">bbox</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">complex_hull_CMR_poly</span><span class="p">,</span> <span class="n">visval_CMR_poly</span><span class="p">,</span> <span class="n">CMR_bbox</span>
+</pre></div>
+</div>
+<p>This is the code used to simplify a given geometry through two simplification techniques: the <a class="reference external" href="https://en.wikipedia.org/wiki/Convex_hull">Convex Hull</a> approach and the <a class="reference external" href="https://bost.ocks.org/mike/simplify/">Visvalingam-Whyatt Algorithm</a>. These algorithms are essential to the Feature Translation Service because larger polygons have too many vertices to be queried through partner tools. I chose to include two simplifications algorithms for a variety of reasons, but primarily because they cater to two different applications:</p>
+<p>The convex hull approach <em><strong>guarantees</strong></em> no loss of information. Some examples of this can be seen below:</p>
+<p><img alt="../../../_images/p1.png" src="../../../_images/p1.png" /></p>
+<p><img alt="../../../_images/p2.png" src="../../../_images/p2.png" /></p>
+<p>The Visvalingam-Whyatt Algorithm offers a more accurate simplification, however at the cost of losing information. This can be seen below:</p>
+<p><img alt="../../../_images/california.png" src="../../../_images/california.png" /></p>
+<p>In the code above, you can be seen that I map the Visvalingam-Whyatt reduction of points to a specific value. For example, I might simplify the California Region (originally ~12,000) vertices to 150 vertices. You may also see that that number depends on the original size of the polygon - where the input number of vertices is mapped to output number of vertices through the tanh function <em>output vertices = max vertices * tanh(input vertices / max vertices)</em>. So, as mentioned in the <a class="reference internal" href="overview.html"><span class="doc">Overview</span></a> section, you’ll specify that maximum number of vertices found in the equation above through the command line. Thus, given you set it equal to 150, you’ll obtain values along the function:</p>
+<p><img alt="../../../_images/tanh.png" src="../../../_images/tanh.png" /></p>
+<p>I went back and forth about a proper function to use, but ultimately it needed to be one which more severely simplifies <em>larger</em> polygons than smaller ones. This is because a polygon that, say, reduces from 50,000 vertices to 500 vertices (x100 decrease) will appear much less affected than a polygon that reduces from 1,000 vertices to 10 (the same x100 decrease). This problem can easily be seen with the below pictures:</p>
+<p><img alt="../../../_images/cal_high_to_low.png" src="../../../_images/cal_high_to_low.png" />
+<img alt="../../../_images/small_high_to_low.png" src="../../../_images/small_high_to_low.png" /></p>
+<p>So this tanh function is roughly equal to <em>y = x</em> for small values of x (exactly what we want as this then doesn’t reduce the number of vertices for small polygons) whereas is approaches <em>y = 150</em> (where our max vertices defined as 150 before) for large polygons.</p>
+<hr class="docutils" />
+<hr class="docutils" />
+<p>So ideally if an end user <em>requires</em> no information loss, they’ll choose the Convex Hull polygon, however if they’re not too concerned, they’ll choose the Visvalingam polygon. That said, we also provide access to the exact shapefile from USGS, just through our S3 bucket in AWS.</p>
+<p>In order for the geometry to be then be used by NASA’s partner tools (primarily NASA’s <a class="reference external" href="https://earthdata.nasa.gov/eosdis/science-system-description/eosdis-components/cmr">Common Metadata Repository</a> (CMR) the polygons must be formatted according to <a class="reference external" href="https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#c-polygon">this</a> specification. I used the following code to do this:</p>
+<hr class="docutils" />
+<hr class="docutils" />
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">format_polygon</span><span class="p">(</span><span class="n">polygon</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;Function that takes a polygon as input and returns a string formatted to</span>
+<span class="sd">       be queryable through CMR&#39;&#39;&#39;</span>
+
+    <span class="c1"># Re-orient polygon points to be counter-clockwise and in the correct</span>
+    <span class="c1"># CMR format</span>
+    <span class="n">polygon</span> <span class="o">=</span> <span class="n">shapely</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">polygon</span><span class="o">.</span><span class="n">orient</span><span class="p">(</span><span class="n">polygon</span><span class="p">,</span> <span class="n">sign</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">coords</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">polygon</span><span class="o">.</span><span class="n">exterior</span><span class="o">.</span><span class="n">coords</span><span class="p">))</span>
+    <span class="n">CMR_polygon</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[()[\]\s+]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">coords</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">CMR_polygon</span>
+</pre></div>
+</div>
+<p>This takes in a polygon, re-orients it to be counter-clockwise (proper format for CMR), then extracts exterior coordinates and removes all extraneous paratheses.</p>
+<hr class="docutils" />
+<hr class="docutils" />
+<p>Finally, I used the following code to create call the simplify function, create the directory structure of shapefiles mentioned previously, and add the CMR queryable polygons and bounding box to the final local database. I then dropped the unsimplified polygon column from the database as well.</p>
+<p><em>Note:</em> The directory structure of shapefiles is only created locally. To update what is in the S3 bucket, you must copy the structure over.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_resolutions_and_combine</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">out_dir</span><span class="p">,</span> <span class="n">max_vertices</span><span class="p">):</span>
+
+    <span class="c1"># Used to display progress bar</span>
+    <span class="n">tqdm</span><span class="o">.</span><span class="n">pandas</span><span class="p">()</span>
+
+    <span class="n">shapefile_location</span> <span class="o">=</span> <span class="s2">&quot;Shapefiles/&quot;</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">shapefile_location</span><span class="p">):</span>
+        <span class="n">shutil</span><span class="o">.</span><span class="n">rmtree</span><span class="p">(</span><span class="n">shapefile_location</span><span class="p">)</span>
+
+    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">shapefile_location</span><span class="p">)</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Writing to shapefiles...&quot;</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">progress_apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">write_to_shapefiles</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Geometry&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;HUC&#39;</span><span class="p">],</span> <span class="n">shapefile_location</span><span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;len&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Geometry_Without_Multipolygons&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">exterior</span><span class="o">.</span><span class="n">coords</span><span class="p">)),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># Iterate over all rows in dataframe and simplify</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Simplifying polygons...&quot;</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Polygon Convex Hull&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Polygon Visvalingam&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Bounding Box&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">df</span><span class="o">.</span><span class="n">progress_apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">simplify</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;Geometry&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Geometry_Without_Multipolygons&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;len&#39;</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">max_vertices</span><span class="p">)),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Geometry_Without_Multipolygons&#39;</span><span class="p">,</span> <span class="s1">&#39;len&#39;</span><span class="p">],</span> <span class="n">inplace</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Writing to file.&quot;</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">out_dir</span> <span class="o">+</span> <span class="s1">&#39;HUC_data.csv&#39;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="bp">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>A “HUC_data.csv” file is created that contains the entire dataset. This is exactly what is uploaded to AWS.</p>
+<p>This final dataset is only around 1 GB. It contains information relating the <em>Region, HUC, Convex Hull Polygon</em>, <em>Visvalingam-Whyatt Polygon</em> and <em>Bounding Box</em> of all ~130,000 HUCs currently in the USGS Watershed Boundary Dataset.</p>
+<p>A small subset of the database can be seen below:</p>
+<p><img alt="../../../_images/database.png" src="../../../_images/database.png" /></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../SWOT/overview.html" class="btn btn-neutral float-right" title="Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
