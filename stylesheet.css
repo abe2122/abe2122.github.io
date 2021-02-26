@@ -105,6 +105,10 @@ name {
   font-size: 32px;
 }
 
+.scale{
+    height: 1em; 
+    width: 1em;
+}
 
 .one {
   display: flex;
@@ -155,8 +159,15 @@ span.highlight {
   background-color: #ffffd0;
 }
 
-span.red {
-  background-color: #ffcccb;
+span.purple {
+  background-color: #BC7BB3;
 }
 
+span.orange {
+  background-color: #FDC776;
+}
+
+span.blue {
+  background-color: #56C4C5;
+}
 
