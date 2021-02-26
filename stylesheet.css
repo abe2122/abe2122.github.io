@@ -114,7 +114,7 @@ name {
 
 .two {
   width: 288px;
-  height: 288px;
+  height: 100%;
   position: absolute;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
@@ -135,7 +135,7 @@ name {
   justify-content: center;
   align-items: center;
   width: 246px;
-  height: 180px;
+  height: 100%;
   position: absolute;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
