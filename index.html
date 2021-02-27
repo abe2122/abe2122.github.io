@@ -1,4 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <html>
 
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10,6 +11,14 @@
 
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/png" href="images/chip.png">
+
+  <style>
+    p.ex1 {
+      margin-top: -8px;
+      margin-left: 10px;
+    }
+  </style>
+  
 </head>
 
 <body>
@@ -47,8 +56,7 @@
               <p align=center>
                 <a href="mailto:abe2122@columbia.edu">Email</a> &nbsp/&nbsp
                 <a href="AustinEbel-CV.pdf">CV</a> &nbsp/&nbsp
-                <a href="https://www.linkedin.com/in/austin-ebel-700057135/"> LinkedIn </a> &nbsp/&nbsp
-                <a href="https://github.com/abe2122"> GitHub </a>
+                <a href="https://www.linkedin.com/in/austin-ebel-700057135/"> LinkedIn </a>
               </p>
             </td>
 
@@ -93,21 +101,29 @@
           </tr>
         </table>
 
-
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td width="100%" valign="middle">
               <heading>Research & Projects</heading>
               <p>
                 This section details several of the more important projects and research done throughout my undergraduate education and up to this point. 
-                <span class="highlight">Highlighted</span> areas emphasize either a publication or an award. Projects are also color-coded as follows,
+                <span class="highlight">Highlighted</span> areas emphasize either a publication or an award. Projects are also color-coded to emphasize 
+                their respective fields as follows,
                 </p>
+            </td>
+          </tr>
+          <tr>
+            <td width="100%" align="center" valign="middle" style="padding: 0px 0px 0px 0px;">
 
-                <p>
-                  <img class="scale" src="images/orange.png"> Computer Science 
-                  <img class="scale" src="images/blue.png"> Math 
-                  <img class="scale" src="images/purple.png"> Hardware (needs formatting)
-                </p>
+              <!-- <img src="images/orange.png" class="scale"> &nbsp; &nbsp; &nbsp; Computer Science -->
+                  <img src="images/orange.png" class="scale" style="vertical-align: middle;"
+                    width="200px" />
+                  <span style="vertical-align: middle;"> &nbsp; Computer Science</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  <img src="images/blue.png" class="scale" style="vertical-align: middle;" width="200px" />
+                  <span style="vertical-align: middle;"> &nbsp; Mathematics</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  <img src="images/purple.png" class="scale" style="vertical-align: middle;" width="200px" />
+                  <span style="vertical-align: middle;"> &nbsp; Hardware</span>
+
             </td>
           </tr>
         </table>
@@ -242,20 +258,22 @@
             <td width="38%" align="center">
 
               <div class="three">
-                <div class="four" id='awares_image'>
+                <div class="four" id='awares_video'>
                   <video width=90% muted autoplay loop>
                     <source src="images/output-small.mp4" type="video/mp4">
                   </video>
                 </div>
-                <img src='images/first-frame.png' width="90%">
+                <img id='awares_image' src='images/first-frame.png' width="90%">
               </div>
               
               <script type="text/javascript">
                 function awares_start() {
-                  document.getElementById('awares_image').style.opacity = "1";
+                  //document.getElementById('awares_image').style.opacity = "0";
+                  document.getElementById('awares_video').style.opacity = "1";
                 }
                 function awares_stop() {
-                  document.getElementById('awares_image').style.opacity = "0";
+                  document.getElementById('awares_video').style.opacity = "0";
+                  //document.getElementById('awares_image').style.opacity = "1";
                 }
                 awares_stop()
               </script>
@@ -276,26 +294,114 @@
             </td>
           </tr>
 
-
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
-            <td width="100%">
+            <td width="100%" style="padding: 50px 0px 10px 20px;">
               <heading>Additional Projects</heading>
               <p>
-                This section
+                This section will more compactly describe some additional projects I've done (or am in the process of doing). These are bit
+                more extracurricular, but still involve some internship and less-important academic work.
               </p>
             </td>
           </tr>
         </table>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
           <tr>
-            <td width="100%">
-              <p>
-                <a href="feature-translation-service/docs/_build/html/index.html">Feature Translation Service</a>
-              </p>
+            <td width="100%" style="padding: 10px 0px 0px 20px;">
+                <span style="vertical-align: middle; margin-bottom:-10px;">
+                  <papertitle><a ref="feature-translation-service/docs/_build/html/index.html">Feature Translation Service &nbsp;</a></papertitle></span>
+                <img src="images/orange.png" class="scale" style="vertical-align: middle;" width="200px" />
+                <br><em><b>NASA JPL</b>, 2019</em><p></p>
+                <ul style="margin-top:-10px;">
+                  <li>Developed a cloud-based service to aid hydrologists in querying existing and future datasets.</li>
+                  <li>Created an extensive suite of documentation found by clicking this project's link.</li>
+                </ul>              
             </td>
           </tr>
+
+          <tr>
+            <td width="100%" style="padding: 10px 0px 0px 20px;">
+              <span style="vertical-align: middle; margin-bottom:-10px;">
+                <papertitle><a ref="feature-translation-service/docs/_build/html/index.html">Virtual Projected Keyboard
+                    &nbsp;</a></papertitle>
+              </span>
+              <img src="images/orange.png" class="scale" style="vertical-align: middle;" width="40px" />  
+              <img src="images/purple.png" class="scale" style="vertical-align: middle;" width="40px" />
+              <br><em><b>Senior Design</b>, 2020</em>
+              <p></p>
+                <ul style="margin-top:-10px;">
+                  <li></li>
+                  <li></li>
+                </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="100%" style="padding: 10px 0px 0px 20px;">
+              <span style="vertical-align: middle; margin-bottom:-10px;">
+                <papertitle><a ref="feature-translation-service/docs/_build/html/index.html">Generalizations of Rohlf's Model of Demand
+                    &nbsp;</a></papertitle>
+              </span>
+              <img src="images/blue.png" class="scale" style="vertical-align: middle;" width="40px" />
+              <br><em><b>Columbia University</b>, 2020</em>
+              <p></p>
+                <ul style="margin-top:-10px;">
+                  <li></li>
+                  <li></li>
+                </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="100%" style="padding: 10px 0px 00px 20px;">
+              <span style="vertical-align: middle; margin-bottom:-10px;">
+                <papertitle><a ref="feature-translation-service/docs/_build/html/index.html">Sensitivity Randomizer
+                    &nbsp;</a></papertitle>
+              </span>
+              <img src="images/orange.png" class="scale" style="vertical-align: middle;" width="40px" />
+              <br><em><b>Extracurricular</b>, 2019-Present</em>
+              <p></p>
+                <ul style="margin-top:-10px;">
+                  <li></li>
+                  <li></li>
+                </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="100%" style="padding: 10px 0px 0px 20px;">
+              <span style="vertical-align: middle; margin-bottom:-10px;">
+                <papertitle><a ref="feature-translation-service/docs/_build/html/index.html">Minecraft Graphing Calculator
+                    &nbsp;</a></papertitle>
+              </span>
+              <img src="images/purple.png" class="scale" style="vertical-align: middle;" width="40px" />
+              <br><em><b>Extracurricular</b>, 2015</em>
+              <p></p>
+                <ul style="margin-top:-10px;">
+                  <li></li>
+                  <li></li>
+                </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="100%" style="padding: 10px 0px 0px 20px;">
+              <span style="vertical-align: middle; margin-bottom:-10px;">
+                <papertitle>Pipelined RISC-V Processor
+                    &nbsp;</papertitle>
+              </span>
+              <img src="images/purple.png" class="scale" style="vertical-align: middle;" width="40px" />
+              <br><em><b>Extracurricular</b>, in progress</em>
+              <p></p>
+                <ul style="margin-top:-10px;">
+                  <li></li>
+                  <li></li>
+                </ul>
+            </td>
+          </tr>
+
+
         </table>
 
 

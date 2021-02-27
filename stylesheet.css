@@ -105,6 +105,11 @@ name {
   font-size: 32px;
 }
 
+h3 {
+ margin-bottom: -10px;
+}
+
+
 .scale{
     height: 1em; 
     width: 1em;
